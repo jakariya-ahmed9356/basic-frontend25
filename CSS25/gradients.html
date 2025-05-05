@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Gradients Practisce</title>
+
+<style>
+/* .card {
+    width: 40%;
+    padding: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.5);
+    background: conic-gradient(red 0deg 90deg, blue 90deg 180deg, green 180deg 270deg, yellow 270deg 360deg);
+    
+}    */
+
+
+/* shadow
+2px 2px 5px 4px => First value: left
+                => Xecond-value: bottom
+                => Third-value: blur how much spread 
+                => Fourth-value: bold of blur
+*/
+ 
+ .shadow-card{
+  margin: 1rem 0;
+  width: min(100%, 300px);
+  padding: clamp(1rem, 3vw, 1.5rem);
+  /* box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2); */
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2), -2px -2px 5px rgba(255, 255, 255, 0.5);
+ }
+
+ .shadow-card h2{
+  /* text-shadow: 2px 2px 1px rgba(0,0,0,0.5); */
+    text-shadow: 1px 1px 2px white, 0 0 5px #ddd, 0 0 5px #ffa500;
+ }
+
+
+/* Types of gradients 
+ 1/ Linear-gradient() => background: linear-gradient(direction, color1, color2, ...) 
+ 2/ Radial-gradient() => background: radial(shape size at position, color1, color2, ..)
+ 3/ Conic-gradient()
+*/
+
+.modern-card{
+  margin: 1rem 0;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  width: min(100%, 300px);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to top, #4facfe, #00f2fe);
+  /* background: linear-gradient(50deg, #cc66f5, rgba(177, 177, 177, 0.333)); */
+  /* background: radial-gradient(circle, #ddd, #e70f0f); */
+  /* background: radial-gradient(ellipse at center, lightblue, navy); */
+  /* background: conic-gradient(red 0deg 90deg, blue 90deg 180deg, green 180deg 270deg); */
+  /* background: linear-gradient(to bottom right, #6a11cb, #2575fc); */
+}
+
+
+
+</style>
+</head>
+<body>
+  
+<div class="shadow-card">
+  <h2> Card heading</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, mollitia.</p>
+</div>
+
+<div class="modern-card">
+    <h2> Card heading</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, mollitia.</p>
+</div>
+
+<div class="text-card">
+  <h2> I'm Jakariya Ahmed | Web Developer | Designer </h2>
+</div>
+
+<style>
+  .text-card{
+    background-color: black;
+    padding: 1rem;
+    width: 100%;
+  }
+  
+  .text-card h2{
+    font-family: "georgia", serif;
+    font-size: 3rem;
+    background-image: linear-gradient(45deg, #4158D0 0%, #C850C0 46%, #FFCC70);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+</style>
+
+
+</body>
+</html>

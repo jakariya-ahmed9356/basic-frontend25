@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title> Form Practice </title>
+	<meta name="vewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+	<!-- fieldset use for a group related form -->
+	<form action="" method="post" enctype="multipart/form-data">
+		<fieldset>
+			<legend> Student Information </legend>
+			<label> First Name <span>*</span> </label>
+			<input type="text" name="first-name" placeholder="Enter your first name" required minlength="5">
+			<label> Last Name </label>
+			<input type="text" name="last-name" placeholder="Enter your last name">
+			<label> E-mail <span>*</span> </label> 
+			<input type="email" name="email" placeholder="Enter valid email address" required>
+			<label> Select Subject <span>*</span> </label>
+			<select name="subject" id="subject" required>
+				<optgroup label="computer">
+					<option> Computer Science </option>
+					<option value=""> Computer Engineering </option>
+					<option value=""> Data Science & Engineering </option>
+				</optgroup>
+				<optgroup label="Political">
+					<option value=""> Global Politics </option>
+					<option value=""> National Politics </option>
+					<option value=""> Islamic Politics </option>
+					<option value=""> Modern Politics </option>
+				</optgroup>
+			</select>
+			<label> Select Date <span>*</span> </label>
+			<input type="date" name="date" id="date">
+			<br> <br>
+			<label> Upload Photo <span>*</span> </label>
+			<input type="file" name="photo" id="file" multiple>
+			<br>
+			<br>
+			<br>
+			<textarea name="message" id="message" rows="5" cols="100"> Write your comment </textarea>
+			<br>
+			<br>
+			<button type="submit"> Submit Application </button>
+		</fieldset>
+	</form> <!-- fieldset use for a group related form -->
+
+
+	<!-- other form inputs  -->
+<br>
+<br>
+<br>
+<br>
+<br>
+
+	<form action="" method="post">
+		<fieldset>
+			<legend> Other Important Inputs </legend>
+			<label> Data & time</label>
+			<input type="datetime-local" id="datatime" name="datetime">
+			<label for="time"> Time </label>
+			<input type="time" name="time">
+			<label for="volume"> Price Range </label>
+			<input type="range" name="price" id="price" min="0" max="10000000000000">
+			<label for="favcolor"> Choose Color </label>
+			<input type="color" name="favcolor" id="favcolor" value="">
+			<label for="search"> Search product </label>
+			<input type="search" name="search" id="search">
+			<input type="hidden" name="prductId" value="29944">
+
+			<input type="submit" name="submit" value="Submit Form">
+		</fieldset>
+	</form>
+
+
+<!-- important input validation by regular expression  -->
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<form action="" method="post">
+	<fieldset>
+		<legend> Important input validation </legend>
+		<label> Only Letters  </label>
+		<input type="text" name="name" pattern="[A-Za-z]+" placeholder="Only Letters" required>
+		<label> Age Validation </label>
+		<input type="number" name="age" pattern="\d+" placeholder="Only numbrs" required>
+		<label> Mobile Validation </label>
+		<input type="tel" name="mobile" pattern="01[0-9]{9}" required>
+		<label> Email Validation </label>
+		<input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}">
+		<br><br>
+		<button type="submit"> Check Validation </button>
+	</fieldset>
+</form>
+
+<input type="email" name="name" placeholder="Enter Valid E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}">
+
+<!-- Noted regular expression rules -->
+[a-z] = all lowercase letters
+[0-9] = all digits
+[A-Z] = all uppercase letters
+[a-zA-z] = combination of lower and upper case letters 
+"\d"+ = 0-9 all numbers. + means at least one or more number
+[a-z0-9] = lowercase letters and all numbers combination
+[a-z]{10} = you can use all lowercase followed by 10 chara 
+01[0-9]{2,11} = must put 0 and 1 and condition allows all numbers with more than 2 numbers and 					less than 11
+(?=.*[A-Za-z])= mean that user must enter at least one upper or lower letter
+(?=.*\d) = mean that user must enter at least one digit
+[A-Za-z\d]{8,} = allows upper & lower letters with a minimum 8 characters. 
+
+
+<!-- <input type="password" name="password" pattern="(?=.*[A-Za-z)(?=.*\d)[A-Za-z\d]{8,}"> -->
+
+
+
+<!-- input field required at least one letter upper or lower and one digit with 8 character combination -->
+<!-- <input type="password" name="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}"> -->
+
+
+
+
+
+</body>
+</html>

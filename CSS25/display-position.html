@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Display Position Practise </title>
+
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ /* display position related css style  */
+
+.inline-block{
+    display: inline-block;
+    width: 24.70%;
+}
+
+.inline-block img{
+    width: 100%;
+}
+
+
+.block{
+    display: block;
+}
+ /* display position related css style  */
+
+.display{
+    display: block; /* inline,inline-block, none, flex, grid */
+    /* display: flex;  Enables flex layout   */
+    /* display: grid; Enable grid layout */
+}
+
+
+.position{
+    position: relative; /* absolute, fixed, sticky, static, z-index */ 
+}
+
+
+.item{
+    background: #ffa005;
+}
+
+
+
+</style>
+
+
+</head>
+<body>
+    
+
+
+<div class="inline-block-section">
+    <div class="inline-block">
+        <img src="img/blog-2.avif" alt="" srcset="">
+    </div>
+
+    <div class="inline-block">
+        <img src="img/blog-2.avif" alt="" srcset="">
+    </div>
+    <div class="inline-block">
+        <img src="img/blog-2.avif" alt="" srcset="">
+    </div>
+    <div class="inline-block">
+        <img src="img/blog-2.avif" alt="" srcset="">
+    </div>
+</div>
+
+
+<div class="block-section">
+    <div class="block">
+        <img src="img/blog-3.avif" alt="" srcset="">
+    </div>
+    <div class="block">
+        <img src="img/blog-3.avif" alt="" srcset="">
+    </div>
+</div>
+
+
+<!-- flex layout -->
+
+
+<style>
+   
+/* flex layout css values */
+.flex-container{
+    display: flex;
+    min-height: 500px;
+    flex-direction: row; /* row, row-reverse, colum, colum-reverse */
+    justify-content: center; /* flex-end, space-between, space-around, space-evenly */
+    align-items: center; /* stretch=>default, flex-start, flex-end, baseline   */ 
+    align-content: space-between; /* flex-end, space-between, space-around, space-evenly */
+    border: 1px solid black;
+    margin-bottom: 50px;
+    gap: 1rem; /* row-gap, column-gap */
+    /*flex-wrap: wrap; /*nowrap=>default, wrap, wrap-reverse  */
+
+
+}
+
+/* one line flex */
+.item{
+flex: 1 1 200px; /* grow shrink basis */ 
+}
+
+.box{
+    background-color: #ffa005;
+    height: 250px;
+    width: 250px;
+    font-size: 40pt;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* flex-shrink: 1; */
+            /* flex-grow: 1; */
+            /* flex-shrink: 0; */
+        }
+
+
+        #box-1{
+            /* flex-shrink: 0; */
+            /* flex-grow: 0; */
+            /* align-self: flex-end; */
+            margin-right: auto;
+        }
+
+        </style>
+
+
+<div class="flex-container">
+    <div class="box" id="box-1">box 1</div>
+    <div class="box">box 2</div>
+    <div class="box">box 3</div>
+    <div class="box">box 4</div>
+    <div class="box">box 5</div>
+</div>
+
+
+
+</body>
+</html>

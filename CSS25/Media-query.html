@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Media Queries Practise </title>
+
+<style>
+/* key points 
+    min-width, max-width, min-hight, max-height, orientation, min-resolution
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@media (max-width: 576px) {
+    /* Smartphones  */
+    
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    /* Tables */
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    /* Small laptops */
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    /* Desktops */
+}
+
+@media (min-width: 1201px) {
+    /* Large Screen */
+}
+
+
+/* Best Practises */
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+
+/* min-width: 576px it work form 576px < upper screen   */
+
+
+
+
+
+
+</style>
+
+</head>
+<body>
+    
+
+<section class="box-section">
+    <article class="box">
+        <h2>Headline</h2>
+        <p>Responsive font size with css calmp() function</p>
+    </article>
+    <article class="box">
+        <h2>Headline</h2>
+        <p>Responsive font size with css calmp() function</p>
+    </article>
+    <article class="box">
+        <h2>Headline</h2>
+        <p>Responsive font size with css calmp() function</p>
+    </article>
+</section>
+
+<style>
+    
+/* responsive units
+    min(), max(), clamp();
+    clamp(min, curr, max) => clamp(50px; 8vw; 100px);
+    clamp(min,curr,max)
+    min => minimum value for small device; current => current value; 
+    max => maximu value for large device
+    best practise for padding,margin,font-size
+    
+*/
+
+/* General css */
+.box-section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.box{
+    text-align: center;
+    /* width: 32.10%; */
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+    margin: 10px;
+    /* padding: clamp(1rem, 3vw, 1.5rem ) */
+}  
+
+.box h2{
+    /*font-size: 8vw;  /* large screen become font-size much larger */
+    /* font-size: 30px; */
+    font-size: clamp(2rem, 5vw, 4rem);
+
+    /* calculation 
+        view width (1200px x 5%) ÷ 100 = 60px
+    */
+}
+
+.box p{
+    /* font-size: 16px; */
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    max-width: 600px;
+}
+
+/* Responsive font-size */
+/* @media (min-width: 1200px){
+    .box h2{
+        font-size: 90px;
+    }
+}
+
+@media (max-width: 992px) {
+    .box h2{
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .box h2{
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .box h2{
+        font-size: 30;
+    }
+} */
+
+
+</style>
+
+
+
+<!-- 
+    min(min-value, max-value) => width: min(50%, 500px) or min(500px, 50%) both are same
+    first value works in small screen => 50% space possesses in small device 
+    second value works in large screen => never contains more than 500px in large device
+    general css width: 50%; min-width: 500px
+    contrast:
+    width: max(500px, 50%)
+    small screens need 500px and large screens no need more than 50% area
+
+    image responsive: 
+    img{
+        width: min(100%, )
+    }
+
+    calc() => width: calc(100% - 40px) from 100% parent minus 40px
+-->
+
+<div class="content">
+    <div class="width-item">
+        <img src="img/blog-1.avif" />
+        <h2>width item 1</h2>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis ipsam in numquam 
+            provident, magnam iusto voluptas placeat temporibus tempore, quia ad? Sapiente quae a
+            enim ab deserunt. Voluptate, vel fugit!
+
+        </p>
+    </div>
+    <div class="width-item">
+        <img src="img/blog-3.avif" />
+        <h2>width item 1</h2>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis ipsam in numquam 
+            provident, magnam iusto voluptas placeat temporibus tempore, quia ad? Sapiente quae a
+            enim ab deserunt. Voluptate, vel fugit!
+
+        </p>
+    </div>
+    <div class="width-item">
+        <img src="img/blog-3.avif" />
+        <h2>width item 1</h2>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis ipsam in numquam 
+            provident, magnam iusto voluptas placeat temporibus tempore, quia ad? Sapiente quae a
+            enim ab deserunt. Voluptate, vel fugit!
+
+        </p>
+    </div>
+    <div class="width-item">
+        <img src="img/blog-3.avif" />
+        <h2>width item 1</h2>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis ipsam in numquam 
+            provident, magnam iusto voluptas placeat temporibus tempore, quia ad? Sapiente quae a
+            enim ab deserunt. Voluptate, vel fugit!
+
+        </p>
+    </div>
+    <div class="width-item">
+        <img src="img/blog-3.avif" />
+        <h2>width item 1</h2>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis ipsam in numquam 
+            provident, magnam iusto voluptas placeat temporibus tempore, quia ad? Sapiente quae a
+            enim ab deserunt. Voluptate, vel fugit!
+
+        </p>
+    </div>
+
+</div>
+
+<style>
+.content{
+    width: 100%;
+    display: grid;
+    margin: 1rem 0;
+    gap: 1rem;
+    /* justify-content: center; */
+    grid-template-columns: auto auto auto;
+    overflow-x: hidden;
+}
+
+.width-item{
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+    width: min(25%,auto);
+    /* width: max(500px, 30%); */
+    padding: clamp(1rem, 3vw, 2rem);
+    text-align: center;
+    
+}
+
+.width-item img {
+     width: min(100%, 100%);
+     height: min(80vh, 600px);
+     object-fit: cover;
+     aspect-ratio: 3/2;
+}
+
+
+
+/* responsive */
+@media (min-width: 1201px) {
+    .width-item img {
+        height: min(40vh, 550px);
+
+    }
+    .content{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .width-item img {
+        height: min(80vh, 400px);
+    }
+}
+
+@media(max-width: 992px) {
+.width-item img {
+    height: min(50vh, 350px);
+}
+}
+
+@media(max-width: 768px) {
+.content{
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin: 0;
+}
+
+.width-item img {
+    height: min(50vh, 350px);
+     width: min(100%, 400px);
+}
+
+
+}
+
+@media (max-width: 576px) {
+.content{
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    margin: 0;
+}
+
+
+.width-item img {
+    height: min(100vh, 400px);
+    width: min(100%, 400px);
+}
+
+
+    
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

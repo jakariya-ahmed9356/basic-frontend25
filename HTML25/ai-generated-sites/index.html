@@ -1,0 +1,26 @@
+<canvas id="circleCanvas" width="500" height="500"></canvas>
+
+<script>
+  var canvas = document.getElementById("circleCanvas");
+  var ctx = canvas.getContext("2d");
+
+  // Draw a circle
+  ctx.beginPath();
+  ctx.arc(250, 250, 100, 0, 2 * Math.PI); // (x, y, radius, startAngle, endAngle)
+  ctx.fillStyle = "green";  // Set fill color to green
+  ctx.fill();                // Fill the circle
+  ctx.stroke();              // Outline the circle
+</script>
+
+
+<canvas id="myCanvas" width="500" height="300"></canvas>
+
+<script>
+  // Get the canvas element
+  var canvas = document.getElementById("myCanvas");
+  var ctx = canvas.getContext("2d");  // Get the 2D drawing context
+
+  // Draw a rectangle
+  ctx.fillStyle = "blue";  // Set the fill color to blue
+  ctx.fillRect(50, 50, 200, 100);  // Draw a rectangle at (50, 50), width: 200, height: 100
+</script>

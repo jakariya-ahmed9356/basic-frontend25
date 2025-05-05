@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Fast code in VS </title>
+</head>
+<body>
+<!--     
+class & ID short code 
+div.container or div#container 
+-->
+<!--    
+nav>ul>li*5  => li*5 create 5 li into the ul 
+-->
+
+
+<!--
+nav>ul>li^a => this short command create 5 li into ul and a anchor tag in the nav outside of ul 
+Exm: 
+<nav>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <a href="#"> Read More </a>
+</nav>
+-->
+
+<!-- 
+nav>ul>li.item*10 => this comment create 10 list with item class
+-->
+
+<!-- nav>ul(li.item$>a)*5  => this command create 
+5 li with item1,item2...item5 clss with anchor tag -->
+<!-- Example -->
+<!-- <nav>
+    <ul>
+        <li class="item1"><a href=""></a></li>
+        <li class="item2"><a href=""></a></li>
+        <li class="item3"><a href=""></a></li>
+        <li class="item4"><a href=""></a></li>
+        <li class="item5"><a href=""></a></li>
+    </ul>
+</nav> -->
+<!-- End Example -->
+
+<!-- 
+nav>ul>(li>a)*10 => this commend create 10 li with 10 anchor tag
+-->
+<!-- Example -->
+<!-- <nav>
+    <ul>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ul>
+</nav> -->
+<!-- End Example -->
+
+<!--- 
+li[style="transition-delay: $"]
+-->
+<!-- Example -->
+<!-- <li style="transition-delay: 1s"></li>
+<li style="transition-delay: 2s"></li>
+<li style="transition-delay: 3s"></li>
+<li style="transition-delay: 4s"></li>
+<li style="transition-delay: 5s"></li> -->
+<!-- End Example -->
+
+
+
+<!-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+Beatae deserunt tempora dolorem error architecto? Voluptatem 
+cumque nemo maiores sit at. -->
+
+<!-- breakdown header short command  -->
+
+<!-- 
+header.header-section>nav.navbar>a.navbar-brand>img[src="logo.png" alt="logo"]^ul.main-menu 
+header.header-section>nav.navbar>(a.navbar-brand>img[src="logo.png" alt="logo"])+ul.main-menu 
+both work similar but second command is standard 
+-->
+
+
+<!-- breakdown header short command  -->
+
+<!-- Example -->
+<header class="header-section">
+    <nav class="navbar">
+        <a href="#" class="navbar-brand"><img src="logo.png" alt="logo"></a>
+        <ul class="main-menu"></ul>
+    </nav>
+</header>
+
+<!-- ul.main-menu>li.item$*5>a[href="#"]{menu $} -->
+
+<ul class="main-menu">
+    <li class="item1"><a href="#">menu 1</a></li>
+    <li class="item2"><a href="#">menu 2</a></li>
+    <li class="item3"><a href="#">menu 3</a></li>
+    <li class="item4"><a href="#">menu 4</a></li>
+    <li class="item5"><a href="#">menu 5</a></li>
+</ul>
+
+
+<!-- ul.main-menu>(li.item$>a[href="#"]{menu $})*5 -->
+<ul class="main-menu">
+    <li class="item1"><a href="#">menu 1</a></li>
+    <li class="item2"><a href="#">menu 2</a></li>
+    <li class="item3"><a href="#">menu 3</a></li>
+    <li class="item4"><a href="#">menu 4</a></li>
+    <li class="item5"><a href="#">menu 5</a></li>
+</ul>
+
+<!-- ul.main-menu>(li.item$>a[href="#"]{menu $})*5+li.item6>a[href="#"]{Services}+ul.sub-menu>(li.sub-item$>a[href=""]{sub $})*4 -->
+<ul class="main-menu">
+    <li class="item1"><a href="#">menu 1</a></li>
+    <li class="item2"><a href="#">menu 2</a></li>
+    <li class="item3"><a href="#">menu 3</a></li>
+    <li class="item4"><a href="#">menu 4</a></li>
+    <li class="item5"><a href="#">menu 5</a></li>
+    <li class="item6">
+        <a href="#">Services</a>
+        <ul class="sub-menu">
+            <li class="sub-item1"><a href="">sub 1</a></li>
+            <li class="sub-item2"><a href="">sub 2</a></li>
+            <li class="sub-item3"><a href="">sub 3</a></li>
+            <li class="sub-item4"><a href="">sub 4</a></li>
+        </ul>
+    </li>
+</ul>
+
+
+header.header-section>nav.navbar>(a.navbar-brand>img[src="logo.png" alt="Logo"])+ul.main-menu>li.item$*4>a{Menu $}+li.item5>a{More}+ul.sub-menu>li.sub-item$*3>a{Sub $}^^li.item6>a{Contact}^^ul.user-actions>li*3>a[href="#"]
+
+
+<!-- header.header-section>nav.navbar>(a.navbar-brand[href="#"]>img[src="logo.png" alt="logo"])+ul -->
+
+<header class="header-section">
+    <nav class="navbar">
+        <a href="#" class="navbar-brand"><img src="logo.png" alt="logo"></a>
+        <ul class="main-menu"></ul>
+    </nav>
+</header>
+
+<!-- ul.main-menu>(li.item$>a[href="#"]{menu $})*6 -->
+<ul class="main-menu">
+    <li class="item1"><a href="#">menu 1</a></li>
+    <li class="item2"><a href="#">menu 2</a></li>
+    <li class="item3"><a href="#">menu 3</a></li>
+    <li class="item4"><a href="#">menu 4</a></li>
+    <li class="item5"><a href="#">menu 5</a></li>
+    <li class="item6"><a href="#">menu 6</a></li>
+</ul>
+
+
+<!-- ul.main-menu>(li.item$>a[href="#"]{menu $})*6+li.item5>a[href="#"]{ Service }+ul.sub-menu>(li.sub-item$>a[href=""]{sub $})*6 -->
+<ul class="main-menu">
+    <li class="item1"><a href="#">menu 1</a></li>
+    <li class="item2"><a href="#">menu 2</a></li>
+    <li class="item3"><a href="#">menu 3</a></li>
+    <li class="item4"><a href="#">menu 4</a></li>
+    <li class="item5"><a href="#">menu 5</a></li>
+    <li class="item6"><a href="#">menu 6</a></li>
+    <li class="item5">
+        <a href="#"> Service </a>
+        <ul class="sub-menu">
+            <li class="sub-item1"><a href="">sub 1</a></li>
+            <li class="sub-item2"><a href="">sub 2</a></li>
+            <li class="sub-item3"><a href="">sub 3</a></li>
+            <li class="sub-item4"><a href="">sub 4</a></li>
+            <li class="sub-item5"><a href="">sub 5</a></li>
+            <li class="sub-item6"><a href="">sub 6</a></li>
+        </ul>
+    </li>
+</ul>
+
+
+<!-- ul.main-menu>(li.item$>a[href="#"]{ menu #})*6+li.item7>a[href=""]{ services }+ul.sub-menu>(li.sub-item>a[href="#"]{sub $})*5^^li.contqact>a[href="#"]{contact}^li.a[href="#"]{About us} -->
+
+<!-- > + ^ -->
+<!--
+--- nest one element inside another like nested selector => grandparend=>parent=>child ---
+ div.container>div.blogs>div.blog 
+
+-->
+
+
+ <!--
+---Sibling selector, Place element side by side---
+div.container+div.blogs+div.blog 
+  -->
+ <div class="container"></div>
+ <div class="blogs"></div>
+ <div class="blog"></div>
+
+
+ <!--
+
+-->
+<!-- 
+--- go out inside of element --
+header.header>ul>li*5>a^^div.left-side 
+ 
+-->
+
+<header class="header">
+    <ul>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ul>
+    <div class="left-side"></div>
+</header>
+
+ 
+
+
+
+<ul class="main-menu">
+    <li class="item1"><a href="#"> menu #</a></li>
+    <li class="item2"><a href="#"> menu #</a></li>
+    <li class="item3"><a href="#"> menu #</a></li>
+    <li class="item4"><a href="#"> menu #</a></li>
+    <li class="item5"><a href="#"> menu #</a></li>
+    <li class="item6"><a href="#"> menu #</a></li>
+    <li class="item7">
+        <a href=""> services </a>
+        <ul class="sub-menu">
+            <li class="sub-item"><a href="#">sub 1</a></li>
+            <li class="sub-item"><a href="#">sub 2</a></li>
+            <li class="sub-item"><a href="#">sub 3</a></li>
+            <li class="sub-item"><a href="#">sub 4</a></li>
+            <li class="sub-item"><a href="#">sub 5</a></li>
+        </ul>
+    </li>
+    <li class="contqact"><a href="#">contact</a></li>
+    <li class="a" href="#">About us</li>
+</ul>
+
+
+
+<!-- ul.main-menu>li.item$*5>a[href="#"]{Menu $} -->
+<ul class="main-menu">
+    <li class="item1"><a href="">Menu 1</a></li>
+    <li class="item2"><a href="">Menu 2</a></li>
+    <li class="item3"><a href="">Menu 3</a></li>
+    <li class="item4"><a href="">Menu 4</a></li>
+    <li class="item5"><a href="">Menu 5</a></li>
+</ul>
+
+<!-- ul.main-menu>(li.item$>a[href="#"])*5 -->
+<ul class="main-menu">
+    <li class="item1"><a href="#">Menu 1</a></li>
+    <li class="item2"><a href="#">Menu 2</a></li>
+    <li class="item3"><a href="#">Menu 3</a></li>
+    <li class="item4"><a href="#">Menu 4</a></li>
+    <li class="item5"><a href="#">Menu 5</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

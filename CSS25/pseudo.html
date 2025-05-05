@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes Practise </title>
+</head>
+<body>
+
+
+<!-- psedudo focus: -->
+
+<style>
+/* pseudo classes and elements
+    elements => ::after, ::before, ::first-letter, ::first-line;
+    classes => :hover, :focus, :ntch-child(n), :first-child, :last-child
+*/
+
+.subscribe  input{
+    padding: 8px 5px;
+    border: 1px solid #dddd;
+    border-radius: 5px;
+    transition: border-color .3s ease;
+}
+
+
+.subscribe input:focus{
+    border-color: #ffa500;
+    outline: none;
+}
+</style>
+
+
+<section class="subscribe">
+    <h2>Subscribe</h2>
+    <form action="#">
+        <lebel for="email"></lebel>
+        <input type="email" name="email" placeholder="E-mail">
+        <button type="submit">Subscribe</button>
+    </form>
+</section><!-- psedudo focus: -->
+
+<!-- :nth-child  -->
+<style>
+li:nth-child(5){
+    color: red;
+    list-style: none;
+}    
+
+li:nth-child(odd){
+    list-style: none;
+}    
+
+
+</style>
+
+<ul>
+    <li><a href="#">item 1</a></li>
+    <li><a href="#">item 2</a></li>
+    <li><a href="#">item 3</a></li>
+    <li><a href="#">item 4</a></li>
+    <li><a href="#">item 5</a></li>
+</ul>
+
+
+
+
+<!-- :nth-child  -->
+
+
+</body>
+</html>

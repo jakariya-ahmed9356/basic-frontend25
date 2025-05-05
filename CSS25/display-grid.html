@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Display Grid Practise </title>
+
+<style>
+.grid-container{
+    border: 2px solid #111;
+    display: grid;
+    /* grid-template-columns: 30% 30% 30%;
+     */
+     /* grid-template-columns: 2fr 1fr 2fr; */
+     /* grid-template-columns: auto auto auto; */
+        /*grid-template-columns: repeat(3,30% 1fr); /*repeat(3,1fr); */
+    /*grid-template-columns: 200px minmax(200px, 3fr) 1fr; /*100px 3fr 2fr;*/
+    /* grid-template-columns: fit-content(300px); */
+    /* grid-template-columns: repeat(100px, min-max(300px, 1fr) auto); not clear it*/
+    gap: 10px;
+}
+
+
+.grid-box{
+    background: #ffa500;
+    padding: 10px 5px;
+}
+</style>
+
+</head>
+<body>
+    
+<div class="grid-container">
+   <div class="grid-box">
+    <h2> Box 1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, debitis.</p>
+    <a href="#" style="background:red;padding:5px 10px; color:white; text-decoration:none">Read </a>
+   </div>
+   <div class="grid-box">
+    <h2> Box 2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, debitis.</p>
+    <a href="#" style="background:red;padding:5px 10px; color:white; text-decoration:none">Read </a>
+   </div>
+   <div class="grid-box">
+    <h2> Box 3</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, debitis.</p>
+    <a href="#" style="background:red;padding:5px 10px; color:white; text-decoration:none">Read </a>
+   </div>
+   <div class="grid-box">
+    <h2> Box 4</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, debitis.</p>
+    <a href="#" style="background:red;padding:5px 10px; color:white; text-decoration:none">Read </a>
+   </div>
+   <div class="grid-box">
+    <h2> Box 5</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, debitis.</p>
+    <a href="#" style="background:red;padding:5px 10px; color:white; text-decoration:none">Read </a>
+   </div>
+   <div class="grid-box">
+    <h2> Box 5</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, debitis.</p>
+    <a href="#" style="background:red;padding:5px 10px; color:white; text-decoration:none">Read </a>
+   </div>
+</div> 
+
+</body>
+</html>

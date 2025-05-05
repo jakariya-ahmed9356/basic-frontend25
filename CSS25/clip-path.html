@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Clip Path Practise  </title>
+</head>
+<body>
+    
+<!-- 
+clip-path function => circle(), ellipse(), polygon(), inset(), path();   
+Basic Syntax: 
+clip-path: circle(radius at cx cy) 
+         : polygon(X0 Y0, X1 Y1 ..... Xn Yn);
+--->
+
+
+<div class="container">
+    <div class="shape"></div>
+</div>
+
+
+<style>
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: inline-block;
+    width: min(50%, 300px);
+    aspect-ratio: 1;
+    border: 1px solid #111;
+}
+
+.shape{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-45deg, #ad6b07, #f3ef1b);
+    /* clip-path: inset(50px 30px round 20% 2%); */
+    /* Circle */
+    /* clip-path: circle(100px); */
+    /* clip-path: circle(40% at center); left, right, top, bottom*/
+    /* clip-path: circle(40% at 0 0); */
+    /* clip-path: circle(60%); */
+
+    /* Ellipse */
+    /* clip-path: ellipse(120px 100px); */
+    /* clip-path: ellipse(80px 40px at 10px 20px); */
+    /* polygon */
+    /* clip-path: polygon(50px 30px, 50px 260px, 200px 30px); */
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+
+
+}
+   
+</style>
+
+
+
+</body>
+</html>

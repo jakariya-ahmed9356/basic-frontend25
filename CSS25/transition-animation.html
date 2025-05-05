@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Transition & Animation Practise </title>
+
+<style>
+:root{
+    --primary-front: "Segoe UI", serif;
+    --secondary-front: "Georgia", sans-serif;
+}
+
+
+.subscribe{
+    /*transition:  property duration timing-function delay ;*/
+    /* transform: scale() rotate() translate(); */
+}
+
+
+
+</style>
+
+
+</head>
+<body>
+
+   
+      
+
+<!-- button hover transition and animation -->
+<section>
+    <h2> Subscribe Now</h2>
+    <button class="subscribe-btn" type="submit">Subscribe</button>
+</section>
+
+<style>
+.subscribe-btn{
+    background-color: #ffa500;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.subscribe-btn:hover{
+    background-color: #ca890f;
+    transform: scale(1.05);
+}
+
+</style>
+
+<!-- button hover transition and animation -->
+      
+      <br>
+<!-- input focus border transition -->
+<article>
+    <lebel for="email" id="email" class="email">Email:</lebel>
+    <input type="email" id="email" class="input-field" placeholder="E-mail">
+</article>
+
+<style>
+
+
+.input-field{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus{
+    border-color:#f1a009;
+    outline: none;
+}
+</style> <!-- input focus border transition -->
+<br>
+<!-- @keyframes transform -->
+  
+<article class="slide-in">
+    <h2> Our Mission </h2>
+    <p>We make ensure you business withou painfull ! 😍</p>
+    <button type="submit"> Explore More </button>
+</article>
+
+  </style>
+<!-- @keyframes transform -->
+<style>
+ @keyframes slideIn{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+ }
+ 
+ .slide-in{
+    animation: slideIn 1s ease-out forwards;
+ }
+
+
+
+</style>
+<br><br>
+
+
+<!-- bounding notification -->
+<aside class="notification">Bounding Notification!</aside>
+
+<style>
+
+@keyframes bounce{
+    0%,100%{
+        transform: translateY(0);
+    }50%{
+        transform: translateY(-20px);
+    }
+}
+
+.notification{
+    background-color: orange;
+    font-size: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: var(--primary-front);
+    animation: bounce 1s infinite alternate;
+}
+
+</style><!-- bounding notification -->
+
+<!-- typing animation -->
+
+<section>
+    <h2 class="typing">WEB DESIGNER & DEVELOPER</h2>
+</section>
+  
+  <style>
+
+/*  
+    animation: typing 1s steps(19) infinite alternate, blink 0.7s step-end infinite;
+  } */
+
+.typing{
+    font-family: var(--primary-front);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #111;
+    width: 25ch;
+    animation: typing 1s steps(22) infinite alternate, blink 0.7s step-end infinite;
+}
+
+
+  /*
+  @keyframes blink{
+    50%{
+        border-color: #ddd;
+    }
+ }
+  */
+ 
+ @keyframes typing{
+    from{
+        width: 0;
+    }to{
+        width: 25ch;
+    }
+ }
+
+ @keyframes blink{
+    50%{
+        color: #fff;
+    }
+ }
+ 
+ </style><!-- typing animation -->
+
+
+<!-- card shadow animation -->
+
+<section class="package-section">
+    <article class="package">
+        <h3>Package Info</h3>
+        <li>info 1</li>
+        <li>info 2</li>
+        <li>info 3</li>
+        <button type="submit">Purchase Now</button>
+    </article>
+</section>
+  
+  <style>
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.1);
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+  }
+
+  .package{
+    width: 33%;
+    padding: 10px 7px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .package li{
+    list-style: none;
+  }
+
+  .package:hover{
+    transform: translateY(-16px) scale(1.02);
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+  }
+
+  .package-section{
+    /* border: 1px solid; */
+  }
+
+
+  
+  .card:hover {
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+  </style>  <!-- card shadow animation -->
+
+
+
+<!-- animation loader -->
+<!-- <aside class="loader"></aside> -->
+<aside class="loader"></aside>
+<style>
+.loader{
+    width: 40px;
+    height: 40px;
+    border: 5px solid red;
+    border-radius: 50%;
+    border-top-color: blue;
+    animation: spin 1s linear infinite;
+    transition: transform .3s ease;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0) scale(1);
+
+    }100%{
+        transform: rotate(360deg) scale(1.04);
+
+    }
+}
+
+</style>
+<!-- animation loader -->
+
+<aside class="alert">Form submitted successfully!</aside>
+
+<style>
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.alert {
+  background: #2ecc71;
+  color: white;
+  padding: 12px 20px;
+  animation: fadeOut 3s ease forwards;
+  animation-delay: 2s;
+}
+
+
+</style>
+
+
+<!-- image zoom animation -->
+<figure class="img-wrap">
+    <img class="zoom-img" src="img/blog-1.avif" alt="">
+</figure>
+
+
+<style>
+.img-wrap{
+    overflow: hidden;
+    width: 40%;
+    border-radius: 15px;
+}
+
+.zoom-img{
+    width: 100%;
+    transition: transform .3s ease;
+}
+
+.img-wrap:hover .zoom-img{
+    transform: scale(1.1);
+}
+
+  </style><!-- image zoom animation -->
+ 
+ 
+ <!-- faq design only css -->
+
+<section>
+    <details>
+      <summary>What is Flexbox?</summary>
+      <p>Flexbox is a layout model in CSS used to align and distribute space among items.</p>
+    </details>
+  </section>
+  
+  <style>
+  details summary {
+    cursor: pointer;
+    padding: 10px;
+    background: #eee;
+    border: 1px solid #ccc;
+  }
+  
+  details[open] p {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  </style> <!-- faq design only css -->
+
+<section class="theme-toggle">
+    <button id="toggle-btn">Switch to Dark Mode</button>
+  </section>
+  
+  <style>
+  body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  body.dark-mode {
+    background-color: #2c3e50;
+    color: white;
+  }
+  
+  button {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #3498db;
+  }
+  </style>
+  
+  <script>
+  const button = document.getElementById('toggle-btn');
+  button.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    button.textContent = document.body.classList.contains('dark-mode') 
+      ? 'Switch to Light Mode' 
+      : 'Switch to Dark Mode';
+  });
+  </script>
+  
+  
+  
+
+</body>
+</html>

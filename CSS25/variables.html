@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS Variable Practise </title>
+<style>
+
+/* two type of variable scopes  
+    1/ Global Scope
+    2/ Local Scope 
+*/
+
+
+
+
+
+:root{
+    /* Font Families  */
+    --font-primary: "Segoe UI", sans-serif; /* Clean modern UI font */
+    --font-secondary: "Georgia", serif; /* Good for headings or classic text */
+
+    /* Font Sizes */
+    --font-size-sm: 0.875rem; /* Small text */
+    --font-size-base: 1rem; /* Base size (16px) */
+    --font-size-md: 1.125rem; /* Medium size*/
+    --font-size-lg: 1.25rem; /* Large text */
+    --font-size-xl: 1.5rem; /* Extra large text*/
+    --font-size-xxl: 2rem; /* Huge headings */
+
+    /* Colors */
+    --color-primary: #0066ff; /* Brand/Main color */
+    --color-secondary: #ff8800; /*Accent/CTA color */
+    --color-accent: #ff4081; /* Extra highlight */
+    --color-text: #333333; /* Regular paragraph color */
+    --color-heading: #111111; /* Heading or bold titles */
+    --color-muted: #888888; /* Muted/inactive text */
+    --color-white: #ffffff; /* For light backgrounds */
+    --color-black: #000000; /* For dark text or themes*/
+    --color-border: #e0e0e0; /* Border lines*/
+
+    /* Background Colors */
+    --bg-primary: #f9f9f9; /* Page background */
+    --bg-section: #ffffff; /* Section blocks */
+    --bg-dark: #121212; /* Dark mode or footer */
+    --bg-light: #eeeeee; /* Light backgrounds */
+    
+    /* Spacing (Margins & Paddings) */
+    --spacing-xxs: 4px; /* Tiny space */
+    --spacing-xs: 8px; /* Extra small */
+    --spacing-sm: 12px; /* Small */
+    --spacing-md: 16px; /* Medium (base) */
+    --spacing-lg: 24px; /* Large */
+    --spacing-xl:32px; /*   Extra llarge */
+    --spacing-xxl: 48px; /* secftion-level space*/
+
+    /* Layout Sizes */
+    --container-width: 1200px; /* Max widrth for content */
+    --container-padding: 1.5rem; /* Padding inside layout blocks */  
+    --full-width: 100%; /* Full width element*/
+
+    /* Borders & Radius */
+    --border-color: #ccc; /* Light border */
+    --border-radius-sm: 4px; /* Small rounding */
+    --border-radius-md: 8px;/* medium rounding */
+    --border-radius-lg: 16px;/* Card-level rounding */
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.05); /* Light UI*/
+    --shadow-md: 0 4px 6px rgba(0,0,0.0.1); /* Cards*/
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15); /*  Modals */
+
+    /* Z-index */
+    --z-index-header: 1000; /* For header */
+    --z-index-modal: 1100; /* For modal */
+    --z-index-tooltip: 1200; /* For tooltip */
+
+    /* Transitions */
+    --transition-fast: 0.2s ease-in-out;
+    --transition-noraml: 0.3s ease;
+    --transition-slow: 0.5s ease; 
+
+}
+
+
+.product{
+    box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.1);
+    width: 30%;
+}
+
+.product img{
+    width: 100%;
+}
+
+.product h2{
+    --color-heading: red;
+    color: var(--color-heading);
+}
+
+</style>
+
+
+
+</head>
+<body>
+    
+
+
+    <section class="product-section">
+        <div class="product">
+            <img src="img/blog-3.avif" alt="">
+            <h2>Product One </h2>
+            <a href="#"> Details </a>           
+        </div>
+    </section>
+
+
+
+</body>
+</html>

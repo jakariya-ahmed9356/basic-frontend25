@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title> Media Tags Practise </title>
+	<meta name="viewport" content="width=device-width, initail-scale=1.0" />
+</head>
+<body>
+
+<!-- pratise media tags  -->
+
+<h1>media tags</h1>
+
+<!-- single video -->
+<video controls loop poster="poster.jpg" autoplay muted src="video.mp4"></video>
+<!-- video,map,website can embadded -->
+<iframe src="video.mp4"></iframe>
+<iframe src="file:///D:/FrontendDevelopment/BasicFrontend25/HTML25/index.html"></iframe>
+
+<!-- multiple media like video, audio can embadded -->
+<br>
+<video controls width="500" loop>
+  <source src="video.mp4" type="video/mp4">
+  
+</video>
+
+
+<!-- this tag can used for map,website,video -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5d7sUsD-buA?si=zZEDVGgW0WVYJOlL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+<!-- embed tag can use for pdf,SVG,games,documents even audio and video  -->
+<embed src="file.pdf" type="application/pdf" width="600" height="400">
+<embed src="video.mp4" type="video/mp4" width="600" height="400">
+
+
+<object data="file.pdf" type="application/pdf" width="600" height="500">
+    Your browser does not support embedded objects.
+</object>
+
+<object data="poster.jpg" type="image/jpeg" width="300" height="200">
+  Image not supported.
+</object>
+
+<br>
+<object data="file.pdf" type="application/pdf">
+	<a href="file.pdf"> Download PDF </a>
+</object>
+
+</body>
+</html>
