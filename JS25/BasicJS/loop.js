@@ -356,12 +356,12 @@ const citizensInfo = [
         division: "Sylhet",
         profession: ['Software Engineer', 'Writer', 'Content Creator'],
         status: "Single",
-    }, 
+    },
     {
         name: "Jakariya",
         age : 22,
         division: "Dhaka",
-        profession: "New Artist",
+        profession: "News Artist",
         status: "Married",
     },
     {
@@ -372,51 +372,90 @@ const citizensInfo = [
         status: "Single",
     }
 ];
+/*
 
-// Objects using forEach() array function with professions array Method: 01;
-citizensInfo.forEach(person => {
-    //check multiple professions
-    const professions = Array.isArray(person.profession) ? person.profession.join(', ') : person.profession;
-    // console.log(`Name: ${person.name}, Division: ${person.division}, Professions: ${professions}`);
-});
+// forEach() function give me access to citizen information but not able to return 
+    or store data in variable. Thus, this is not correct way to access mixed-type data 
 
+citizensInfo.forEach(citizen => {
+    const professions = Array.isArray(citizen.profession) 
+    ? citizen.profession.join(', ') : citizen.profession;
+    console.log(citizen.profession);
+})
+
+/*
 
 // Objects using for..of loop with professions array Method: 02;
+for...of loop can access in object mixed-typed data but not able return 
+or store data in variable 
+
 for (const citizen of citizensInfo) {
-    ///check multiple professions and convert into string
-    const professions = Array.isArray(citizen.profession) ? citizen.profession.join(', ') 
-        : citizen.profession;
-    // console.log(`Name: ${citizen.name}, Age: ${citizen.age}, Profession: ${professions}`);
+    let professions = Array.isArray(citizen.profession) ? citizen.profession.join(', '): citizen.profession;
+    console.log(`Name: ${citizen.name}, Age: ${citizen.age}, Professions: ${professions}`);
 }
+*/
 
-
-// Objects using map array function with professions array Method: 02;
-citizensInfo.map(citizen => {
-    const professions = Array.isArray(citizen.profession) ? citizen.profession.join(', ') : citizen.profession;
-    // console.log(`Name: ${citizen.name}, Age: ${citizen.age}, Profession: ${professions}`);
-});
 
 /*  Core few use case of map() function */
 // 
+const userData = ['Jakariya','jek@gmail.com',9340505959];
+const numberData = [5,7,10,11]
+const multiplication = numberData.map(num => num * 3);
+// console.log(multiplication);
+const updatedNumber = numberData.map(num => num === 9 ? "Match" : "Not match");
+// console.log(updatedNumber);
+const checkAge = multiplication.map(age => age >= 18 ? "Adult" : "Tennage");
+// console.log(checkAge);
+
+const greeting = userData.map(user => user + "welcome");
+// console.log(greeting);
+
+
+/*
+// Access mutliple array data in Objects using map() function Method: 02;
+// This system only return array value but not object value
+
+const mapResult = citizensInfo.map(citizen => {
+    return Array.isArray(citizen.profession) ? citizen.profession.join(', ') : citizen.profession;
+});
 
 
 
-//Extracting specific data 
+
+This is ideal way to access in object array by map() arrow function with 
+return value with variables both object and object array 
+
+const citizens = citizensInfo.map(citizen => ({
+    mixed_professions: Array.isArray(citizen.profession) 
+        ? citizen.profession.join(', ') : citizen.profession,
+        name: citizen.name,
+        age: citizen.age,
+        division: citizen.division
+}));
+
+citizens.forEach(data => {
+   console.log(`Name: ${data.name}, Profession: ${data.mixed_professions}`);
+})
+
+
+
+// This is also ideal way for Extracting specific data and insert new object value
 const formattedCitizens = citizensInfo.map(citizen => ({
     name: citizen.name,
     age: citizen.age,
+    profession: Array.isArray(citizen.profession)
+                ? citizen.profession.join(', ')
+                : citizen.profession,
     division: citizen.division,
     married_status: citizen.age >= 25 ? "Married" : "Single",
 }));
 
-
-
-
-
-
-formattedCitizens.forEach(updatedCitizens => {
-    console.log(updatedCitizens.married_status);
+formattedCitizens.forEach(info => {
+    // console.log(`Name: ${info.name}, Age: ${info.age}, Profession: ${info.profession}`);
 });
+// console.log(formattedCitizens);
+
+*/
 
 
 
@@ -424,15 +463,34 @@ formattedCitizens.forEach(updatedCitizens => {
 
 
 
-
-
+/********
 // Objects using filter() array function with professions array Method: 03;
-const multiProfessions = citizensInfo.filter(citizen => {
-     const checkProfessions = Array.isArray(citizen.profession);
-    //  return checkProfessions;
+//This is correct and professional way to filter and return or store data by variable
+but not shorter way  
+const multiProfessions = citizensInfo.filter(professions => {
+     const checkProfessions = Array.isArray(professions.profession);
+     return checkProfessions;
 });
 
-console.log(multiProfessions);
+multiProfessions.forEach(citizen => {
+    // console.log(citizen.name);
+});
+
+*********/
+
+/* 
+filter function only return boolean data not allow string 
+*/
+
+//filter only by checking array profession 
+const filterResult = citizensInfo.filter(professions => Array.isArray(professions.profession))
+
+const aultResutl = citizensInfo.filter(adult => adult.age > 25);
+const marrridStatus = citizensInfo.filter(married => married.status === 'Single')
+// console.log(marrridStatus);
+
+
+
 // Accesss in Object specific values by filter() function
 const activeUsers = usersInfo.filter(user => user.status === 'active');
 
