@@ -85,13 +85,13 @@ for (let i = 0; i < 40; i++ ) {
 }
 
 /* short form even numbers  */
-// for (let i = 0; i < 20; i++) if(i % 2 == 0) console.log(i);
+for (let i = 0; i < 20; i++) if(i % 2 == 0) console.log(i);
 
 /* short form even numbers  */
-// for(let n = 0; n < 20; n++) if( n % 2 !== 0) console.log(n);
+for(let n = 0; n < 20; n++) if( n % 2 !== 0) console.log(n);
 
 /* continue key is not possible in short line code  */
-// for(let n = 0; n < 20; n++) if( n % 2 !== 0) continue console.log(n);
+for(let n = 0; n < 20; n++) if( n % 2 !== 0) continue ;
 
 /**************************  while & do while loop  **************************/
 
@@ -104,10 +104,10 @@ while (j < 5) {
 
 // until type yes loop is continue running
 let agree = false;
-// while  (!agree) {
-//     // const input = prompt("Do you agree? (yes/no)");
-//     // if(input === 'yes') agree = true; //short for loop
-// }
+while  (!agree) {
+    const input = prompt("Do you agree? (yes/no)");
+    if(input === 'yes') agree = true; //short for loop
+}
 
 // console.log("Thank you! ");
 
@@ -129,10 +129,10 @@ while (true) {
 
 ///do while loop
 
-// do {
-//     n++;    
-//     // console.log(n);
-// }while (n < 5);
+do {
+    n++;    
+    // console.log(n);
+}while (n < 5);
 
 
 
@@ -299,9 +299,9 @@ const usersInfo = [
 
 /// multi object value access using for...of loop
 for (const user of usersInfo ) {
-    /* console.log('Name: ' + user.email);
+    console.log('Name: ' + user.email);
     console.log('Email: ' + user.mobile);
-    console.log('Mobile: ' + user.name); */
+    console.log('Mobile: ' + user.name); 
 }
 
 /// Access particualr values
@@ -341,8 +341,8 @@ const productInfo = () => ([
 
 const products = productInfo();
 for (const product of products) {
-    // console.log(`Name: ${product.name}, Price: ${product.price}, Color: ${product.color.join(', ')}`);
-    // console.log(`Name: ${product.name}, Price: ${product.price}, Color:`);
+    console.log(`Name: ${product.name}, Price: ${product.price}, Color: ${product.color.join(', ')}`);
+    console.log(`Name: ${product.name}, Price: ${product.price}, Color:`);
     product.color.forEach(colors => {
         // console.log(colors);
     })
@@ -373,10 +373,10 @@ const citizensInfo = [
     }
 ];
 /*
-
 // forEach() function give me access to citizen information but not able to return 
     or store data in variable. Thus, this is not correct way to access mixed-type data 
-
+*/
+    
 citizensInfo.forEach(citizen => {
     const professions = Array.isArray(citizen.profession) 
     ? citizen.profession.join(', ') : citizen.profession;
@@ -388,12 +388,12 @@ citizensInfo.forEach(citizen => {
 // Objects using for..of loop with professions array Method: 02;
 for...of loop can access in object mixed-typed data but not able return 
 or store data in variable 
-
+*/
 for (const citizen of citizensInfo) {
     let professions = Array.isArray(citizen.profession) ? citizen.profession.join(', '): citizen.profession;
     console.log(`Name: ${citizen.name}, Age: ${citizen.age}, Professions: ${professions}`);
 }
-*/
+
 
 
 /*  Core few use case of map() function */
@@ -414,6 +414,7 @@ const greeting = userData.map(user => user + "welcome");
 /*
 // Access mutliple array data in Objects using map() function Method: 02;
 // This system only return array value but not object value
+*/
 
 const mapResult = citizensInfo.map(citizen => {
     return Array.isArray(citizen.profession) ? citizen.profession.join(', ') : citizen.profession;
@@ -422,8 +423,8 @@ const mapResult = citizensInfo.map(citizen => {
 
 
 
-This is ideal way to access in object array by map() arrow function with 
-return value with variables both object and object array 
+//This is ideal way to access in object array by map() arrow function with 
+//return value with variables both object and object array 
 
 const citizens = citizensInfo.map(citizen => ({
     mixed_professions: Array.isArray(citizen.profession) 
@@ -455,7 +456,7 @@ formattedCitizens.forEach(info => {
 });
 // console.log(formattedCitizens);
 
-*/
+
 
 
 
@@ -467,6 +468,7 @@ formattedCitizens.forEach(info => {
 // Objects using filter() array function with professions array Method: 03;
 //This is correct and professional way to filter and return or store data by variable
 but not shorter way  
+*********/
 const multiProfessions = citizensInfo.filter(professions => {
      const checkProfessions = Array.isArray(professions.profession);
      return checkProfessions;
@@ -476,7 +478,7 @@ multiProfessions.forEach(citizen => {
     // console.log(citizen.name);
 });
 
-*********/
+
 
 /* 
 filter function only return boolean data not allow string 
@@ -496,16 +498,16 @@ const activeUsers = usersInfo.filter(user => user.status === 'active');
 
 // console.log(activeUsers);
 for(const activeUser of activeUsers) {
-    // console.log(activeUser.name);
+    console.log(activeUser.name);
 }
 
 
 /// you can accesss multi object value
 for (const user of usersInfo) {
     if(user.status === 'active'){
-        // console.log(`Welcome ${user.name}, Your Status: ${user.status} `);
+        console.log(`Welcome ${user.name}, Your Status: ${user.status} `);
     }else{
-        // console.log(`Please Login! ${user.name}, Your Status: ${user.status}`);
+        console.log(`Please Login! ${user.name}, Your Status: ${user.status}`);
     }
 }
 
@@ -513,7 +515,7 @@ for (const user of usersInfo) {
 for (const user of usersInfo) {
     // console.log("User:");
     for (const [key, val] of Object.entries(user)) {
-        // console.log('Key:' + key + " , " + "Val: " + val);
+        console.log('Key:' + key + " , " + "Val: " + val);
     }
 }
 
@@ -527,6 +529,8 @@ usersInfo.forEach(user => {
     // console.log('Val:' + user.name);
 });
 
+
+/*************************    for.... in ************************/
 
 
 
