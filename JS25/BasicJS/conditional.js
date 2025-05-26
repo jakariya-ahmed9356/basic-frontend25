@@ -3,6 +3,14 @@
 
 */
 
+///// oneline if 
+// if(condition) statement;
+
+//// one line if..esle
+// condition ? expressionTrue : expressionFalse
+let age = 20;
+// let result = age > 18 ? "Adult" : "Tennager";
+// console.log(result);
 // grading System in nested else if
 // let score = prompt("Enter Score:");
 let score = 80;
@@ -21,19 +29,19 @@ if(score >= 90) {
 
 
 // Switch Statement u
-switch(expression)  {
-    case "value1":
-    //statement
-    break;
-    case "value2":
-    //statement
-    break;
-    case "value3":
-    //statement
-    break;
-    default:
-    //statement
-}
+// switch(expression)  {
+//     case "value1":
+//     //statement
+//     break;
+//     case "value2":
+//     //statement
+//     break;
+//     case "value3":
+//     //statement
+//     break;
+//     default:
+//     //statement
+// }
 
 /* professional use case 
  1. User role management, 2. Order status management, 3. http response status
