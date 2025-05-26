@@ -105,8 +105,8 @@ while (j < 5) {
 // until type yes loop is continue running
 let agree = false;
 while  (!agree) {
-    const input = prompt("Do you agree? (yes/no)");
-    if(input === 'yes') agree = true; //short for loop
+    // const input = prompt("Do you agree? (yes/no)");
+    //if(input === 'yes') agree = true; //short for loop
 }
 
 // console.log("Thank you! ");
@@ -515,7 +515,7 @@ for (const user of usersInfo) {
 for (const user of usersInfo) {
     // console.log("User:");
     for (const [key, val] of Object.entries(user)) {
-        console.log('Key:' + key + " , " + "Val: " + val);
+        // console.log('Key:' + key + " , " + "Val: " + val);
     }
 }
 
@@ -530,9 +530,55 @@ usersInfo.forEach(user => {
 });
 
 
-/*************************    for.... in ************************/
+/************************* for.... in ************************/
+
+const student = {
+    name: "alex",
+    age : 23,
+    department: "Computer",
+    reg: 23233333,
+}
+
+for (let key in student) {
+    // console.log(`${key} : ${student[key]}`);
+}
+
+for (const [key, val] of Object.entries(student)) {
+    // console.log(`${key} : ${val}`);
+}
+
+const roles = {
+    admin: "Has full control",
+    Author: "can edit content",
+    User: "Can control their account"
+}
 
 
+for (let role in roles) {
+    // console.log(`${role} = ${roles[role]}`);
+}
 
 
+/// hasOwnProperty
+for (let key in roles) {
+    if(roles.hasOwnProperty(key)){
+        // console.log(`${key} : ${roles[key]}`);
+    }
+}
 
+// Count key with specific prfix
+const settings = {
+    ui_theme: "dark",
+    ui_font: "Segoe UI",
+    db_host: "localhost",
+    db_port: 3306
+}
+
+let uiSettings = {};
+for (let key in settings) {
+    if(key.startsWith("ui_")) {
+        uiSettings[key] = settings[key]
+    }
+}
+
+console.log(uiSettings);
