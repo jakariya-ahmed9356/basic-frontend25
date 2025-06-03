@@ -256,7 +256,7 @@ if(checkRole) {
 // pro level 
 const allowedRoles = ['admin', 'super admin', 'seller'];
 const currentUserRole = 'admin';
-const multiCurrentRoles = ['admin', 'editor', 'seller']; //user has multiple roles
+const multiCurrentRoles = ['author', 'editor', 'admin']; //user has multiple roles
 
 function hasAccess(currentUserRole, allowedRoles) {
     return allowedRoles.includes(currentUserRole);
@@ -268,7 +268,7 @@ if (hasAccess(currentUserRole, allowedRoles)) {
     // console.log( currentUserRole + ' ' +"Access Denied !");
 }
 
-//second way it is slow for  
+//second way it is slow with filter()  
 function accessControl(allowedRoles, currentUserRole) {
     return allowedRoles.filter(role => role === currentUserRole);
 }
@@ -281,8 +281,12 @@ if(matchRole.length > 0) {
 }
 
 /***
- * @param { filter() and includes() } - check user multiple roles
- * @param { find() } - check user multiple roles 
+ * @parm similar array methods()
+ * @param { filter() } - All matching elements (array) and return new array of elements
+ * @param { find() } - checks condtion if matched return elements or values 
+ * @param { includes() } - checks a specific primitive(not function, object) value in array or string and return boolean(true or false)
+ * @param { some() } - boolean(true or false) if any element math the condition
+ * @param { every() } - check every elements is same return callback function true else false
  */
 //this use case include() efficient
 let currentRoles = multiCurrentRoles.filter(role => allowedRoles.includes(role));
@@ -295,6 +299,16 @@ if (currentRoles.length > 0) {
 }else {
     // console.log(`Access Denied !`);
 }
+
+// this case some() 
+const permittedRole = multiCurrentRoles.some(role => allowedRoles.includes(role));
+
+if (permittedRole) {
+    // console.log(`Access Granted !`);
+}else {
+    // console.log(`Access Denied !`);
+}
+
 
 
 /**
@@ -321,8 +335,119 @@ const fruitString = fruits.toString();
 
 
 
+/***
+ * Iteration Array Methods 11 
+ * @param { forEach() } - Loop through array no return value
+ * @param { map() } - Return new array after applying a function
+ * @param { filter() } - Return new array with elements that match condition
+ * @param { reduce() } - Return a single value after reducing the array
+ * @param { reduceRight() } - Like reduce but from right to left 
+ * @param { some() } - Returns ture if any elements match
+ * @param { every() } - Returns ture if all elements match
+ * @param { find() } - Returns the first element that match
+ * @param { findIndex() } - Returns the index of the first match
+ * @param { flat() } - Flatten nested array
+ * @param { flatMap() } - Map + flatten
+ * 
+ ***/
 
+/****
+ * @param confusion
+ * @param { reduce(acc, curr, 0) } - Return a single value after reducing the array
+ * @param { acc = accumulator } - Running total
+ * @param { curr = current item } - current item
+ * @param { 0 } - Initial value of the accumulator 
+ */
+const numbers = [1, 2, 3, 4, 5, 6];
 
+const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+
+const employes = [
+    {name: 'alex', role: 'manager', age: 26},
+    {name: 'karim', role: 'labour', age: 22},
+    {name: 'adam', role: 'engineer', age: 24},
+    {name: 'jek', role: 'reporter', age: 26},
+    {name: 'john', role: 'labour', age: 30}
+];
+
+const groupByRole = employes.reduce((acc, employe) => {
+    acc[employe.role] = acc[employe.role] || [];
+    acc[employe.role].push(employe.name);
+    return acc;
+}, {});
+
+//some() return callback function true/false 
+const grantedRole = multiCurrentRoles.some(role => allowedRoles.includes(role));
+const onlyManager = employes.some(employe => employe.role === 'manager');
+// console.log(onlyManager);
+
+if (grantedRole) {
+    // console.log(`Access Granted !`);
+}else {
+    // console.log(`Access Denied !`);
+}
+
+//every() check all value same if correct return callback function true or false
+const onlyLabour = employes.every(employe => employe.role === 'manager')
+//find() return elements that matched 
+const onlyEngineer = employes.find(employe => employe.role === 'engineer');
+//findIndex()
+let checkIndex = employes.findIndex(data => data.name === 'alex'); 
+
+if (checkIndex !== -1) {
+    employes[checkIndex].role = 'Programmer'; //index:role updated
+}
+//flat() 
+const postTags = [['sj', 'html'], ['css'],['react','node']]
+const tagData = postTags.flat();
+
+const tagResult = tagData.map(tags => tags);
+    tagData.map((tag, i) => {
+        // console.log(`Tag ${i + 1} : ${tag}`);
+    });
+
+const students = [
+    {
+        name: 'Jakariya',
+        regi: 90393030,
+        department: 'CSE',
+        subjects: ['Match', 'Java', 'Database Design'],
+
+    },
+    {
+        name: 'Ali Ahmed',
+        regi: 90390930,
+        department: 'EEE',
+        subjects: ['Math', 'Digital Electronic', 'Power Systems'],
+
+    },
+    {
+        name: 'Farjana Akter',
+        regi: 23393030,
+        department: 'CSE',
+        subjects: ['JavaScript', 'Java', 'System Design'],
+
+    },
+    {
+        name: 'Alexa',
+        regi: 90393030,
+        department: 'Chemistry',
+        subjects: ['Organic Chemistry', 'Analytical Chemistry'],
+
+    },
+     
+];
+
+/// pro level way 
+const studentData = students.flatMap(student => 
+    student.subjects.map(subject => ({
+        name : student.name,
+        department: student.department,
+        subject: subject,
+    }))
+);
+
+// console.log(studentData);
 
 
 
