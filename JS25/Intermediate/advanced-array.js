@@ -470,7 +470,7 @@ const studentData = students.flatMap(student =>
  * 
  * Methods Covered:
  * 
- * * 1. Array.isArray() - Checks if a value is an array.
+ * 1. Array.isArray() - Checks if a value is an array.
  * 2. Array.from() - Creates a new array from an iterable or array-like object.
  * 3. Array.of() - Creates a new array instance from individual arguments.
  * 4. Array.prototype.entries() - Returns an iterator of [index, value] pairs.

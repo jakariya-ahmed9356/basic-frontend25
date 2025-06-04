@@ -56,7 +56,7 @@ let assignNew = assignRole(assignObject, 'Admin');
 //Object.hasOwnProperty(key)
 let checkPropery = user.hasOwnProperty('age');
 
-// Object.defineProperty
+// Object.defineProperty has confusion 
 Object.defineProperty(user, 'id', {
     value: 101,
     writable: false,
