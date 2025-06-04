@@ -406,6 +406,16 @@ const tagResult = tagData.map(tags => tags);
         // console.log(`Tag ${i + 1} : ${tag}`);
     });
 
+/**
+ * Represent students of application
+ * 
+ * Properties:
+ * @property {string} name - Full name of the student
+ * @property {number} registration - Unique registration number of the student 
+ * @property {string} department - Academic department the student belongs to
+ * @property {string[]} subject - List of subjects the student is enrolled in. 
+ */
+
 const students = [
     {
         name: 'Jakariya',
@@ -450,11 +460,51 @@ const studentData = students.flatMap(student =>
 // console.log(studentData);
 
 
+/**
+ * ===============================
+ * Advanced Utility Array Methods:
+ * ===============================
+ * 
+ * This section contains built-in JS utility methods for working with array,
+ * including creation, type-checking, iteration, and immutable updates
+ * 
+ * Methods Covered:
+ * 
+ * * 1. Array.isArray() - Checks if a value is an array.
+ * 2. Array.from() - Creates a new array from an iterable or array-like object.
+ * 3. Array.of() - Creates a new array instance from individual arguments.
+ * 4. Array.prototype.entries() - Returns an iterator of [index, value] pairs.
+ * 5. Array.prototype.keys() - Returns an iterator of array indices.
+ * 6. Array.prototype.values() - Returns an iterator of array values.
+ * 7. Array.prototype.with() - Returns a new array with one element replaced (immutable, ES2023).
+ *
+ * Use these methods for clean, readable, and functional manipulation of array data,
+ * especially when working with iterable data sources, modern JavaScript collections,
+ * or when maintaining immutability in state management (e.g., React).
+ * */
 
 
+//from() 
+const userName = 'Jakariya';
+const letters = Array.from(userName);
 
 
+/* convert nodelist from the DOM
+const nodeList = document.querySelectorAll('.item');
+const elements = Array.from(nodeList);
 
+*/
+
+//arrayOf()
+const userAccess = Array.of('Admin', 'Editor', 'Subscriber');
+
+// const newArray = Array.of(3);
+const newArray = new Array(3);
+
+//with()
+const updateRole = userAccess.with(1, 'Author');
+
+console.log(updateRole);
 
 
 
