@@ -169,7 +169,7 @@ let clonedRow = userRow.copyWithin(2, 0, 3);
 
 /****
  * @param { concat() }
- * @param concat() marge data from different source
+ * @param  () marge data from different source
  * @param use case dashboard apps, analytics tools,
  * 
  */
