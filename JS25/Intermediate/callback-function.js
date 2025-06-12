@@ -19,17 +19,16 @@ const user = {
 }
 
 
-
-
-
 function greet(name, callback) {
-    // console.log(`Hi ${name}`);
+    console.log(`Welcome to ${name} in Callbakc function`);
     callback();
 }
 
-greet('Jakariya', function () {
-    // console.log('Welcome to our team');
+//call callback in anonymous function 
+greet('Jakariya Aman', function () {
+    // console.log('Welcome to Callback function !');
 });
+
 
 //reuseable callback function 
 function greeting (name, actionGreet) {
@@ -48,20 +47,20 @@ const employe = [
 ];
 
 const addNewRole = {age: 25, state: 'Sylhet'};
-employe.push(addNewRole);
+// employe.push(addNewRole);
 
-function callbackFunction(callbackPassed) {
-    callbackPassed();
+
+//add new value by callback function
+function callbackFunction(funcationPassed) {
+    funcationPassed();
 }
 
-function insert() {
-    const newEmploye = {name: 'jek', designation: 'Manager'} 
-        employe.push(newEmploye);
-    console.log(employe);
+function addNew() {
+    const addNewVal = {name: 'alex', designation: 'Digital Marketer'}
+    const updated = employe.push(addNewVal);
+    // console.log(employe);
 }
-
-
-callbackFunction(insert)
+callbackFunction(addNew);
 
 
 function welcomeMsg(name) {

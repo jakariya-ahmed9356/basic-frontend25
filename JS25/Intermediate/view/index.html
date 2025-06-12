@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Event Handling - DOM </title>
+</head>
+<body>
+
+
+    
+<style> 
+#output{
+    color: green;
+} 
+</style>
+<!-- single input typing  -->
+    <button id="greetBtn" type="submit">submit</button>
+    <input type="text" id="username" placeholder="Enter your name /">
+    <p id="output"> </p> <!-- single input typing  -->
+
+
+<!-- Different between textContent vs innerText vs innerHTML -->
+    <div id="message">
+        <span style="display: none">[Hidden]</span>
+        Hello <strong>World</strong>
+    </div>
+    <p id="textContentOutput"></p>
+
+<!-- form control by js -->
+<form id="loginForm" action="">
+    <input type="text" name="" id="email" placeholder="Email" required>
+    <input type="password" name="" id="pwd" placeholder="********" required>
+    <button type="submit"> Login </button>
+</form>
+
+<!-- event delegation  -->
+<ul id="menu">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+
+<!-- double click -->
+<h3 id="dbClick">Double click and display masic </h3>
+
+<div id="textBox">Double-click to edit me</div>
+
+<!-- mousedown event -->
+<div id="dragBox">Hold to Drag</div>
+<h3 id="mouseEnter">Enter mouse text is changed </h3>
+
+
+<!-- keyboard key events  -->
+<input type="text" id="nameInput" placeholder="Type your name" />
+<h4 id="keyOutput"></h4>
+
+
+
+<!-- js start  -->
+    <script>
+        
+        //js input event
+        const input = document.getElementById('username')
+        input.addEventListener('input', function() {
+            output.textContent = `Typing: ${input.value}`;
+            // output.innerText = `Typing: ${input.value}`;
+            output.innnerHTML = `Typing: ${input.value}`;
+        });
+
+/***
+ * Different between textContent vs innerText vs innerHTML
+ * 
+ */ 
+
+
+ //textContent
+ const notice = document.getElementById('message');
+//  textContentOutput.textContent = notice;     
+// console.log(notice.textContent);
+// console.log(notice.innerText);
+// console.log(notice.innerHTML);
+
+
+// Basic form handle 
+const formSubmit = document.getElementById('loginForm');
+formSubmit.addEventListener('submit', function (e) {
+    e.preventDefault();
+    formSubmit.reset();
+    alert("submitted !");
+});
+
+
+// event delegation in js
+
+const menuItem = document.getElementById('menu');
+menuItem.addEventListener('click', function(e) {
+    
+    if (e.target.tagName === 'A') {
+        alert(`You clicked on ${e.target.textContent}`);
+    }
+    
+});
+
+
+
+</script>
+<script src="../dom.js"></script>
+</body>
+</html>
