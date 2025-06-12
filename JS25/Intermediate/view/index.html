@@ -13,6 +13,15 @@
 #output{
     color: green;
 } 
+
+.error {
+  font-size: 0.85em;
+  margin-top: 4px;
+  display: block;
+}
+
+
+
 </style>
 <!-- single input typing  -->
     <button id="greetBtn" type="submit">submit</button>
@@ -54,6 +63,47 @@
 <!-- keyboard key events  -->
 <input type="text" id="nameInput" placeholder="Type your name" />
 <h4 id="keyOutput"></h4>
+
+<!-- submit event  -->
+<form id="registerForm" novalidate>
+    <div class="form-group">
+        <label for="user_name"> Name </label>
+        <input type="text" id="user_name" placeholder="Full Name"/>
+        <small class="error" id="nameError"></small>
+    </div>
+    <div class="form-group">
+        <label for="user_email"> Email </label>
+        <input type="email" id="user_email" placeholder="E-mail"/>
+        <small class="error" id="emailError"></small>
+    </div>
+     <div class="form-group">
+        <label for="user_mobile"> Mobile </label>
+        <input type="number" id="user_mobile" placeholder="Mobile"/>
+        <small class="error" id="mobileError"></small>
+    </div>
+    <br>
+  <button type="submit">Register</button>
+  <br>
+  <h3 id="success_msg"></h3>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

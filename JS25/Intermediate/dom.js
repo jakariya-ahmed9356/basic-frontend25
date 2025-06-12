@@ -130,11 +130,80 @@ document.addEventListener('keydown', (e) => {
 
 /*****
  * =========================
- * DOM keyboard Events 
+ * DOM Form Events 
  * =========================
- * @param {'keydown'} - any key up pressed
- * @param {'keyup'} - key is released
- * @param {'keypress'} - key is pressed
+ * @param {'submit'} - Form is submitted
+ * @param {'change'} - Form elements changes (e.g., dropdown)
+ * @param {'input'} - On every keystroke input
+ * @param {'focus'} - Element gets focus
+ * @param {'blur'} - Element loses focus
  * 
  */
+
+
+/***
+ * submit event for registration form
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+// Get form for submition
+const regiForm = document.getElementById('registerForm');
+const successMsg = document.getElementById('success_msg');
+
+//Utility: show error
+function showError(id, msg) {
+    const errorElem = document.getElementById(id);
+    errorElem.textContent = msg;
+    errorElem.style.color = 'red';
+}
+
+//Utility: clear error
+function clearError(id) {
+    document.getElementById(id).textContent = '';
+}
+
+// Main Validation Logic 
+regiForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    // Get form input data 
+    const username = document.getElementById('user_name').value.trim();
+    const email = document.getElementById('user_email').value.trim();
+    const mobile = document.getElementById('user_mobile').value.trim();
+
+    let isValid = true;
+
+    //name validation 
+    if (username === '') {
+        showError('nameError', 'Name is required');
+        isValid = false;
+    }else {
+        clearError('nameError');
+    }
+
+    //Email Validation 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        showError('emailError', 'Enter a valid email address');
+        isValid = false;
+    }else {
+        clearError('emailError');
+    }
+
+    // Mobile Validation 
+    const mobileRegex = /^[0-9]{10,15}$/;
+    if (!mobileRegex.test(mobile)) {
+        showError('mobileError', 'Enter a valid mobile number (10-15 digits)');
+        isValid = false;
+    }else {
+        clearError('mobileError');
+    }
+
+    if (isValid) {
+        
+    }
+
+});
 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Block Element Practise (BEM)</title>
+</head>
+<body>
+
+<style>
+ /* Block (component) */  
+ .card {
+    /* Styles for the card block */
+ } 
+
+ /* Element (a child part of the block) */
+ .card_title {
+    /* Styles for the title inside the card */
+ }
+
+ .card_image {
+    /* Styles for the image inside card */
+ }
+
+ /* Modifier (variation of the block or element)  */
+.card--highlighted {
+    background-color: orange;
+}
+
+.card_title--large {
+    font-size: 2rem;
+}
+
+
+</style>
+
+
+
+
+<!-- Block Element for standard and clean block structure  -->
+<!-- card block  -->
+<div class="card card--highlighted">
+    <!-- Element: card_image -->
+    <img class="card_image" src="img/card.jpg" alt="card-image">
+    <!-- Element: card_title -->
+     <h2 class="card_title card_title--large"> Welcome to BEM </h2>
+
+     <!-- Element: card_content -->
+      <p class="card_content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, ad?</p>
+      <!-- Element: card_button -->
+    <button class="card_button card_button--large">Get Started</button>
+</div>
+
+<!-- BEM block for product card -->
+<div class="product-card product-card--highlighted">
+    <img src="img/product.jpg" alt="New t-shirt" />
+    <h2 class="product-card__title product-card_title--large">Dark Black New Black T-shirt For Man</h2>
+    <strong> Price <p></p> 540 tk </strong>
+</div>
+
+
+</body>
+</html>
