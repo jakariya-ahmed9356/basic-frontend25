@@ -88,9 +88,56 @@
 </form>
 
 
+<!-- change event for select element -->
+<label for="department">Select Department</label>
+<select name="department" id="department">
+    <option value="">-- Select --</option>
+    <option value="CSE">CSE</option>
+    <option value="EEE">EEE</option>
+    <option value="BBA">BBA</option>
+</select>
+<br>
+
+<!-- Payment Method Select From Multiple Payment Gateway -->
+ 
+<label>Payment Methods:</label>
+<br>
+<label><input type="radio" name="payment" value="Credit Card">Credit Card </label>
+<label><input type="radio" name="payment" value="Paypal">Paypal</label>
+<label><input type="radio" name="payment" value="Bkash">Bkash</label>
+
+<!-- Terms Agreement Checkbox  -->
+ <br>
+<br>
+<label for="agree"> 
+    <input type="checkbox" id="agree-term"> 
+    I agree to the terms and conditions 
+</label>
+<br>
+<br>
+<!-- preview uploded profile by change event  -->
+<input type="file" id="profile-img" accept="image/*">
+<br>
+<img id="preview-profile" style="max-width: 150px; margin-top: 10px;">
+
+
+<!-- Submit Button (Initially Disabled)  -->
+<button type="submit" id="submit-btn" disabled>Submit</button>
+
+
+<br>
+<br>
+<br>
+
+<input type="text" id="student-name" name="student-name" placeholder="Enter Name">
+<small id="hint" style="display: none;">Name must be at least 6 characters</small>
 
 
 
+<!-- Output container: Diplay the selected department form the dropdown-->
+<h3 id="selected-department"></h3>
+<!-- Output Container: Display the checked payment method -->
+<h3 id="payment-info"></h3>
 
 
 
