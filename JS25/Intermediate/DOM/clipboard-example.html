@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Clipboard Events</title>
+</head>
+<body>
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sanitized Phone Paste with Copy/Edit UI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+
+    .phone-container {
+      position: relative;
+      max-width: 300px;
+      margin: auto;
+    }
+
+    #phoneInput {
+      width: 100%;
+      padding: 12px;
+      padding-right: 60px;
+      font-size: 16px;
+    }
+
+    .icon-btns {
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      transform: translateY(-50%);
+      display: flex;
+      gap: 6px;
+    }
+
+    .icon-btns span {
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .icon-btns span:hover {
+      opacity: 0.7;
+    }
+
+    .status {
+      margin-top: 10px;
+      font-size: 14px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📱 Paste Phone Number (Spaces Removed Automatically)</h2>
+
+  <div class="phone-container">
+    <input type="text" id="phoneInput" placeholder="017 1234 567" value="8458595559" />
+    <div class="icon-btns">
+      <span id="copyBtn" title="Copy">📋</span>
+      <span id="editBtn" title="Edit">✏️</span>
+    </div>
+  </div>
+  <div class="status" id="statusMsg"></div>
+
+  <script>
+    const input = document.getElementById('phoneInput');
+    const copyBtn = document.getElementById('copyBtn');
+    const editBtn = document.getElementById('editBtn');
+    const statusMsg = document.getElementById('statusMsg');
+
+    // Sanitize pasted input (remove spaces)
+    input.addEventListener('paste', (e) => {
+      e.preventDefault();
+      const pasted = e.clipboardData.getData('text');
+      const clean = pasted.replace(/\s/g, '');
+      input.value = clean;
+    });
+
+    // Copy to clipboard
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(input.value).then(() => {
+        statusMsg.textContent = "📋 Number copied!";
+        setTimeout(() => statusMsg.textContent = '', 2000);
+      });
+    });
+
+    // Focus input for editing
+    editBtn.addEventListener('click', () => {
+      input.focus();
+    });
+  </script>
+
+</body>
+</html>
+
+    <script src="../DOM/clipboard.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
