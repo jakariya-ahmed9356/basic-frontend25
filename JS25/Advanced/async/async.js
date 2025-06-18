@@ -6,5 +6,20 @@
  *    
  */
 
+// callback function
+function fetchUserData(callback) {
+    setTimeout(() => {
+        const student = {name: "Alex Royce", department: 'Computer'};
+        callback(student);
+    }, 1000);
+}
 
+// fetch data
+fetchUserData(function(student) {
+    // console.log(`Name: ${student.name}, Department: ${student.department}`);
+});
+// OR 
 
+fetchUserData((student) => {
+    // console.log(`Name: ${student.name}, Department: ${student.department}`);
+});
