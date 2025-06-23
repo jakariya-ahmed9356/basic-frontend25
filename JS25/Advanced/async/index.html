@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous JS</title>
+</head>
+<body>
+    
+  <h2>Fecth data by API</h2>
+  <table border="1" id="postTable" style="width: 50%; text-align: center;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>title</th>
+            <th>Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+  </table>  
+
+
+
+  <h2 id="show-msg">Fecth data by API with pagination</h2>
+  <table id="table-post" style="width: 50%; text-align: center;" border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>title</th>
+            <th>Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+  </table> 
+  <br>
+    <div class="pagination">
+        <button aria-label="" id="prev-btn">Previous</button>
+        <span id="page-indicator">Page 1</span>
+        <button id="next-btn">Next</button>
+    </div>
+    <br>
+    <br>
+    <br>
+
+
+    <span id="view-data"></span>
+
+    <br>
+    <br>
+    <br>
+
+      <script src="async.js"></script>
+</body>
+</html>
+
