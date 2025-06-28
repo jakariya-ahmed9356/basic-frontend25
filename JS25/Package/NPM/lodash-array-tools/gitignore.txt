@@ -1,0 +1,25 @@
+# Node modules - never commit this!
+node_modules/
+
+# logs
+logs/
+*.log
+
+# Environment variables
+.env 
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor folders
+.vscode/
+.idea/
+
+# Dis or build files
+dist/
+build/
+
+# Dependency lock files (optional)
+package-lock.json
+
