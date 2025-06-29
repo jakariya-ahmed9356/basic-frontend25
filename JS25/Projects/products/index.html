@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Manager</title>
+    <!-- all external css link  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>🛍️ Product Manager</h2>
+    <!-- product entry form  -->
+    <form id="productForm">
+      <input type="text" id="product" placeholder="Product Name" required />
+      <input type="number" id="price" placeholder="Price" required />
+      <input type="number" id="qty" placeholder="Quantity" required />
+      <input type="url" id="image" placeholder="Image URL" required />
+      <select id="type" required>
+        <option value="">Select Product Type</option>
+        <option value="trending">Trending</option>
+        <option value="featured">Featured</option>
+        <option value="new">New Arrival</option>
+      </select>
+      <button type="submit" id="submitBtn">Add Product</button>
+    </form> <!-- end product entry form  -->
+
+    <div class="product-list" id="productList"><!-- display all product --></div>
+  </div>
+
+
+  <!-- all js link  -->
+  <script src="script.js">
+
+  </script>
+</body>
+</html>
