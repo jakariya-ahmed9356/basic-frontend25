@@ -1,10 +1,12 @@
-import Welcome from './welcome';
+import Element, {ParentDiv, Bye } from './welcome';
 import WelcomeClass from './WelcomeClass';
+
 function App() {
   return (
     <div>
-      <Welcome/>
-      <WelcomeClass/>
+      <Element />
+      <ParentDiv />
+      <Bye />
     </div>
   );
 }

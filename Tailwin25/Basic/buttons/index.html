@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover | Button | Focus</title>
+    <link rel="stylesheet" href="./../css/output.css">
+</head>
+<body>
+    
+    <div class="flex max-w-sm bg-gray-500 p-4 m-4 shadow-lg rounded items-center">
+        <img class="mx-auto block w-30 h-auto rounded-full sm:mx-o" src="./../assets/img/erin-lindford.90b9d461.jpg" alt="">
+        <div class="space-y-4 w-45">
+            <div class="space-y-0.5">
+                <p class="text-xl font-semi-bold text-white">Jakariya Aman</p>
+                <p class="text-gray-300 font-mendium">Software Engineer</p>
+            </div>
+            <button type="submit" class="border px-3 rounded-full py-1 text-gray-300 hover:bg-white hover:text-gray-500 cursor:pointer transition">
+                Message
+            </button>
+        </div>
+    </div>
+
+<!-- // Hover list  -->
+<div class="m-4 w-100 border border-gray-100 my-6 px-4">
+    <h2 class="py-4 font-bold font-lg"> Tailwind Pseudo Clases </h2>
+    <ul role="list mx-6">
+        <li class="group hover:bg-gray-200 hover:rounded flex items-center py-4 pl-4 border-b-1 border-gray-100 transition">
+            <img class="h-10 w-10 rounded-full" src="./../assets/img/photo-1500648767791-00dcc994a43e.avif" alt="">
+            <div class="ml-3 space-y-0.5">
+                <p class="font-semibold">Kristen Ramos</p>
+                <p class="text-gray-500 truncate">kristen.ramos@example.com</p>
+            </div>
+            <div class="ml-3 group invisible group-hover:visible transition">
+                <a class="hover:bg-gray-300 py-1 px-2 rounded-full text-sm text-gray-500 font-semibold transition" href="">Call →</a>
+            </div>
+        </li>
+
+        <li class="group hover:bg-gray-200 hover:rounded flex items-center py-4 pl-4 border-b-1 border-gray-100 transition">
+            <img class="h-10 w-10 rounded-full" src="./../assets/img/photo-1500648767791-00dcc994a43e.avif" alt="">
+            <div class="ml-3 space-y-0.5">
+                <p class="font-semibold">Kristen Ramos</p>
+                <p class="text-gray-500 truncate">kristen.ramos@example.com</p>
+            </div>
+            <div class="ml-3 group invisible group-hover:visible transition">
+                <a class="hover:bg-gray-300 py-1 px-2 rounded-full text-sm text-gray-500 font-semibold transition" href="">Call →</a>
+            </div>
+        </li>
+        <li class="group hover:bg-gray-200 hover:rounded flex items-center py-4 pl-4 border-b-1 border-gray-100 transition">
+            <img class="h-10 w-10 rounded-full" src="./../assets/img/photo-1500648767791-00dcc994a43e.avif" alt="">
+            <div class="ml-3 space-y-0.5">
+                <p class="font-semibold">Kristen Ramos</p>
+                <p class="text-gray-500 truncate">kristen.ramos@example.com</p>
+            </div>
+            <div class="ml-3 group invisible group-hover:visible transition">
+                <a class="hover:bg-gray-300 py-1 px-2 rounded-full text-sm text-gray-500 font-semibold transition" href="">Call →</a>
+            </div>
+        </li>
+        <li class="group hover:bg-gray-200 hover:rounded flex items-center py-4 pl-4 border-b-1 border-gray-100 transition">
+            <img class="h-10 w-10 rounded-full" src="./../assets/img/photo-1500648767791-00dcc994a43e.avif" alt="">
+            <div class="ml-3 space-y-0.5">
+                <p class="font-semibold">Kristen Ramos</p>
+                <p class="text-gray-500 truncate">kristen.ramos@example.com</p>
+            </div>
+            <div class="ml-3 group invisible group-hover:visible transition">
+                <a class="hover:bg-gray-300 py-1 px-2 rounded-full text-sm text-gray-500 font-semibold transition" href="">Call →</a>
+            </div>
+        </li>
+        <li class="group hover:bg-gray-200 hover:rounded flex items-center py-4 pl-4 border-b-1 border-gray-100 transition">
+            <img class="h-10 w-10 rounded-full" src="./../assets/img/photo-1500648767791-00dcc994a43e.avif" alt="">
+            <div class="ml-3 space-y-0.5">
+                <p class="font-semibold">Kristen Ramos</p>
+                <p class="text-gray-500 truncate">kristen.ramos@example.com</p>
+            </div>
+            <div class="ml-3 group invisible group-hover:visible transition">
+                <a class="hover:bg-gray-300 py-1 px-2 rounded-full text-sm text-gray-500 font-semibold transition" href="">Call →</a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+<!-- // Hover image card  -->
+
+<div class="my-6 relative group w-64 h-40 overflow-hidden rounded shadow-lg">
+    <img src="./../assets/img/photo-1550525811-e5869dd03032.avif" alt="">
+
+    <!-- Child text that shows when parent is hover  -->
+     <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+        <a class="text-white text-lg" href="">Mor Inofo..</a>
+     </div>
+</div>
+
+<div class="m-6 w-64 h40 group relative overflow-hidden rounded shadow-log">
+    <img src="photo-1438761681033-6461ffad8d80.avif" alt="">
+    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-70 flex justify-center items-center transition">
+        <a class="text-white" href="">Click Here</a>
+    </div>
+</div>
+
+<!-- Table  -->
+
+<div class="w-200 m-6 overflow-x-auto">
+    <table class="text-sm text-center text-gray-600">
+        <thead class="bg-gray-100 dark:bg-gray-800 text-xs uppercase text-gray-500 dark:text-gray-400">
+            <tr>
+                <th class="px-6 py-3">Name</th>
+                <th class="px-6 py-3">Price</th>
+                <th class="px-6 py-3">Quantity</th>
+                <th class="px-6 py-3">Photo</th>
+                <th class="px-6 py-3">action</th>
+            </tr>
+        </thead>
+        <tbody class="bg-white">
+            <tr class="border-b border-gray-200 hover:bg-gray-50 even:bg-gray-50">
+                <td class="px-4 py-4">New man blue t-shirt </td>
+                <td class="px-4 py-4">340tk</td>
+                <td class="px-4 py-4">02</td>
+                <td class="px-4 py-4"><img class="rounded-full w-15 p-2" src="photo-1438761681033-6461ffad8d80.avif" alt=""></td>
+                <td class="px-4 py-4"><button>edit</button></td>
+            </tr>
+            <tr class="border-b border-gray-200 hover:bg-gray-50 even:bg-gray-50">
+                <td class="px-4 py-4">New man blue t-shirt </td>
+                <td class="px-4 py-4">340tk</td>
+                <td class="px-4 py-4">02</td>
+                <td class="px-4 py-4"><img class="rounded-full w-15 p-2" src="photo-1438761681033-6461ffad8d80.avif" alt=""></td>
+                <td class="px-4 py-4"><button>edit</button></td>
+            </tr>
+            <tr class="border-b border-gray-200 hover:bg-gray-50 even:bg-gray-50">
+                <td class="px-4 py-4">New man blue t-shirt </td>
+                <td class="px-4 py-4">340tk</td>
+                <td class="px-4 py-4">02</td>
+                <td class="px-4 py-4"><img class="rounded-full w-15 p-2" src="photo-1438761681033-6461ffad8d80.avif" alt=""></td>
+                <td class="px-4 py-4"><button>edit</button></td>
+            </tr>
+            <tr class="border-b border-gray-200 hover:bg-gray-50 even:bg-gray-50">
+                <td class="px-4 py-4">New man blue t-shirt </td>
+                <td class="px-4 py-4">340tk</td>
+                <td class="px-4 py-4">02</td>
+                <td class="px-4 py-4"><img class="rounded-full w-15 p-2" src="photo-1438761681033-6461ffad8d80.avif" alt=""></td>
+                <td class="px-4 py-4"><button>edit</button></td>
+            </tr>
+            <tr class="border-b border-gray-200 hover:bg-gray-50 even:bg-gray-50">
+                <td class="px-4 py-4">New man blue t-shirt </td>
+                <td class="px-4 py-4">340tk</td>
+                <td class="px-4 py-4">02</td>
+                <td class="px-4 py-4"><img class="rounded-full w-15 p-2" src="photo-1438761681033-6461ffad8d80.avif" alt=""></td>
+                <td class="px-4 py-4"><button>edit</button></td>
+            </tr>
+            <tr class="border-b border-gray-200 hover:bg-gray-50 even:bg-gray-50">
+                <td class="px-4 py-4">New man blue t-shirt </td>
+                <td class="px-4 py-4">340tk</td>
+                <td class="px-4 py-4">02</td>
+                <td class="px-4 py-4"><img class="rounded-full w-15 p-2" src="photo-1438761681033-6461ffad8d80.avif" alt=""></td>
+                <td class="px-4 py-4"><button>edit</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div class="max-w-md mx-auto">
+  <fieldset class="space-y-4">
+    <!-- Payment Option 1 -->
+    <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:shadow-md transition group peer-checked:border-blue-500">
+      <input type="radio" name="payment" value="card" class="peer hidden" checked />
+      <div class="flex items-center space-x-4 w-full">
+        <img src="https://img.icons8.com/color/48/000000/visa.png" class="w-10 h-10" alt="Visa">
+        <div class="flex-grow">
+          <h3 class="text-gray-800 dark:text-white font-semibold">Credit/Debit Card</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">Pay with Visa, MasterCard, etc.</p>
+        </div>
+        <div class="w-5 h-5 border-2 border-gray-400 rounded-full peer-checked:border-blue-600 peer-checked:bg-blue-600 transition"></div>
+      </div>
+    </label>
+
+    <!-- Payment Option 2 -->
+    <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:shadow-md transition group peer-checked:border-blue-500">
+      <input type="radio" name="payment" value="paypal" class="peer hidden" />
+      <div class="flex items-center space-x-4 w-full">
+        <img src="https://img.icons8.com/color/48/000000/paypal.png" class="w-10 h-10" alt="PayPal">
+        <div class="flex-grow">
+          <h3 class="text-gray-800 dark:text-white font-semibold">PayPal</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">Pay using your PayPal account</p>
+        </div>
+        <div class="w-5 h-5 border-2 border-gray-400 rounded-full peer-checked:border-blue-600 peer-checked:bg-blue-600 transition"></div>
+      </div>
+    </label>
+  </fieldset>
+</div>
+
+
+<div class="max-w-md mx-auto space-y-4">
+  <label class="flex items-center p-4 border rounded-lg cursor-pointer peer-checked:border-blue-500 hover:shadow-md transition">
+    <!-- Hidden Checkbox (peer) -->
+    <input type="checkbox" name="payment" class="peer hidden" />
+
+    <!-- Content -->
+    <div class="flex items-center space-x-4 w-full">
+      <img src="https://img.icons8.com/color/48/visa.png" class="w-10 h-10" />
+      <div class="flex-grow">
+        <h3 class="text-gray-800 font-semibold">Visa / MasterCard</h3>
+        <p class="text-sm text-gray-500">Pay using card</p>
+      </div>
+
+      <!-- Custom Check Circle -->
+      <div class="w-5 h-5 border-2 border-gray-400 rounded-full peer-checked:border-blue-600 peer-checked:bg-blue-600 transition"></div>
+    </div>
+  </label>
+</div>
+
+
+<div class="max-w-md mx-auto space-y-4">
+  <label class="flex items-center p-4 border rounded-lg cursor-pointer hover:shadow-md transition">
+    <!-- Make sure this input is inside the label -->
+    <input type="checkbox" class="peer sr-only" />
+
+    <div class="flex items-center space-x-4 w-full">
+      <img src="https://img.icons8.com/color/48/visa.png" class="w-10 h-10" />
+      <div class="flex-grow">
+        <h3 class="text-gray-800 font-semibold">Visa / MasterCard</h3>
+        <p class="text-sm text-gray-500">Pay using card</p>
+      </div>
+      <!-- Custom check indicator -->
+      <div class="w-5 h-5 border-2 border-gray-400 rounded-full peer-checked:bg-blue-600 peer-checked:border-blue-600 transition-all"></div>
+    </div>
+  </label>
+</div>
+
+
+</body>
+</html>
