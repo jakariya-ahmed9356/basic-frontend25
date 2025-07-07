@@ -1,6 +1,6 @@
 import Element, {
   ParentDiv, Bye, Calculate,LogIn,ElementDesign,
-  RenderList, Card
+  RenderList, Card, Profile
 }
 from './welcome';
 import WelcomeClass from './WelcomeClass';
@@ -17,6 +17,10 @@ function App() {
      <RenderList/>
      <Card title="Practise First Props in React" desc="learning new react props" id="39393"/>
      <Card title="Practise First Props in React 2" desc="learning new react props 2" id="39393"/>
+    <Profile/>
+
+
+
     </div>
   );
 }

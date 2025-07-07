@@ -74,10 +74,37 @@ function Card(props) {
     );
 }
 
+function Profile() {
+    const person = {
+        name: 'Jakariya Aman',
+        designation: 'Frontend Developer',
+        theme: {
+            width: '33%',
+            backgroundColor: 'black',
+            color: '#fff',
+            fontSize: '22px',
+            textAlign: 'center',
+
+        }
+    };
+
+    return (
+        <div style={person.theme}>
+            <img className='avatar'
+            src='/logo192.png' alt='' />
+            <h2>{person.name}</h2>
+            <ul>
+                <li>{person.designation}</li>
+            </ul>
+
+        </div>
+    );
+}
+
 export default Element;
 export {
     ParentDiv, Bye, Calculate, 
     LogIn, ElementDesign, RenderList,
-    Card
+    Card, Profile
 
 };
