@@ -84,6 +84,7 @@ function Profile() {
             color: '#fff',
             fontSize: '22px',
             textAlign: 'center',
+            borderRadius: '20px'
 
         }
     };
