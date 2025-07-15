@@ -7,6 +7,7 @@ import {
 
 } from "./components/Props.js";
 
+import FormSubmit from "./components/FormSubmit.js";
 
 const App = () => {
   let marks = 80;
@@ -51,6 +52,7 @@ const App = () => {
       
       <Skills skills={mySkills} />
 
+      <FormSubmit/>
 
     </div>
   );
