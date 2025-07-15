@@ -10,7 +10,7 @@ const Select = () => {
             <select style={style}>
                 {
                     items.map((item, i) => {
-                        return <option value={i.toString()}>{item}</option>
+                        return <option key={i.toString()}>{item}</option>
                     })
                 }
             </select>

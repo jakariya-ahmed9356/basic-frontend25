@@ -2,10 +2,16 @@ import {Hi, Greet} from "./components/Demo.js";
 import Select from "./components/select.js";
 import CheckAuth from "./components/ConditionalRender.js";
 
+import {
+  Welcome,Profile,Skills
+
+} from "./components/Props.js";
 
 
 const App = () => {
   let marks = 80;
+  const mySkills = ['Javascript', 'React', 'PHP', 'Laravel'];
+  
   return(
     <div>
       <Hi/>
@@ -34,6 +40,18 @@ const App = () => {
 
       <Select/>
       <CheckAuth/>
+
+      <Welcome name="Jakariya Ahmed Aman"/>
+      <Profile 
+      name="Jakariya Ahmed"
+      age={27}
+      profession="Frontend Developer"
+      />
+      
+      
+      <Skills skills={mySkills} />
+
+
     </div>
   );
 }
