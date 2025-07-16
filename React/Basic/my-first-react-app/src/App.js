@@ -4,7 +4,8 @@ import CheckAuth from "./components/ConditionalRender.js";
 
 
 import {
-  ElementChange, FocusInput,ModifyInput,ModifyImage,GetInputVal
+  ElementChange, FocusInput,ModifyInput,ModifyImage,GetInputVal,
+  IncrementNumber
 
 } from "./components/Hook.js";
 
@@ -72,6 +73,8 @@ const App = () => {
 
 
       <ContactForm/>
+
+      <IncrementNumber/>
     </div>
   );
 }

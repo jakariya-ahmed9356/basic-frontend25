@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 
 
 // userRef Hook
@@ -93,8 +93,40 @@ function GetInputVal() {
 }
 
 
+function IncrementNumber() {
+    const qtyRef = useRef();
 
-export {ElementChange, FocusInput, ModifyInput, ModifyImage,GetInputVal};
+    // Set initial value on first render
+    React.useEffect(() => {
+        qtyRef.current.value = 1;
+    }, []);
+
+    const increment = () => {
+        let currentQty = parseInt(qtyRef.current.value) || 0;
+        qtyRef.current.value = currentQty + 1;
+    }
+
+    const deCrement = () => {
+        let currentQty = parseInt(qtyRef.current.value) || 0;
+        if (currentQty > 1) {
+            qtyRef.current.value = currentQty - 1;
+        }
+    };
+
+    return(
+        <div className="text-center mt-4">
+        <button onClick={deCrement}>-</button>
+        <input type="number" style={{width: '50px'}} ref={qtyRef} min='1'/>
+        <button onClick={increment}>+</button>
+        </div>
+    );
+}
+
+
+export {
+    ElementChange, FocusInput, ModifyInput, ModifyImage,GetInputVal,
+    IncrementNumber
+};
 
 
 
