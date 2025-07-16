@@ -2,19 +2,27 @@ import {Hi, Greet} from "./components/Demo.js";
 import Select from "./components/select.js";
 import CheckAuth from "./components/ConditionalRender.js";
 
+
+import {
+  ElementChange, FocusInput,ModifyInput,ModifyImage,GetInputVal
+
+} from "./components/Hook.js";
+
 import {
   Welcome,Profile,Skills
 
 } from "./components/Props.js";
 
 import FormSubmit from "./components/FormSubmit.js";
+import ContactForm from "./components/Contact.js";
+
 
 const App = () => {
   let marks = 80;
   const mySkills = ['Javascript', 'React', 'PHP', 'Laravel'];
-  
+  const style = {marginBottom: '50px'}
   return(
-    <div>
+    <div style={style}>
       <Hi/>
       <Greet/>
 
@@ -54,6 +62,16 @@ const App = () => {
 
       <FormSubmit/>
 
+
+
+      <ElementChange/>
+      <FocusInput/>
+      <ModifyInput/>
+      <ModifyImage/>
+      <GetInputVal/>
+
+
+      <ContactForm/>
     </div>
   );
 }
