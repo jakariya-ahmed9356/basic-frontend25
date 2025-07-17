@@ -93,7 +93,7 @@ function GetInputVal() {
 }
 
 
-function IncrementNumber() {
+function ProductQty() {
     const qtyRef = useRef();
 
     // Set initial value on first render
@@ -123,9 +123,37 @@ function IncrementNumber() {
 }
 
 
+
+function IncrementDecrement() {
+    const number = useRef(0);
+    const output = useRef();
+
+    // Increment number
+    const increment = () => {
+        number.current++;
+        output.current.innerText = number.current;
+    }
+    // Decrease number
+    const decrement = () => {
+        if (number.current > 0) {
+            number.current--;
+            output.current.innerText = number.current;
+        }
+    }
+
+    return(
+        <div className="text-center my-5">
+            <button onClick={decrement}>-</button>
+            <h1 ref={output}>0</h1>
+            <button onClick={increment}>+</button>
+        </div>
+    );
+}
+
+
 export {
     ElementChange, FocusInput, ModifyInput, ModifyImage,GetInputVal,
-    IncrementNumber
+    ProductQty,IncrementDecrement
 };
 
 

@@ -5,7 +5,7 @@ import CheckAuth from "./components/ConditionalRender.js";
 
 import {
   ElementChange, FocusInput,ModifyInput,ModifyImage,GetInputVal,
-  IncrementNumber
+  ProductQty,IncrementDecrement
 
 } from "./components/Hook.js";
 
@@ -16,6 +16,11 @@ import {
 
 import FormSubmit from "./components/FormSubmit.js";
 import ContactForm from "./components/Contact.js";
+
+import UserProfile from './components/component-types/Functional.js';
+
+import {Increment,LoginForm} from './components/hook/UseState.js';
+
 
 
 const App = () => {
@@ -74,7 +79,21 @@ const App = () => {
 
       <ContactForm/>
 
-      <IncrementNumber/>
+      <ProductQty/>
+      <IncrementDecrement/>
+      
+
+      <UserProfile
+        name="Jakariya Ahmed Aman"
+        email="aman@gmail.com"
+        profession="Frontend Developer"
+        avatar="https://i.pravatar.cc/150?img=11"
+        status={true}
+      />
+
+
+      <Increment/>
+      <LoginForm/>
     </div>
   );
 }
