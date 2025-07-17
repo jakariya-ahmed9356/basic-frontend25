@@ -21,6 +21,12 @@ import UserProfile from './components/component-types/Functional.js';
 
 import {Increment,LoginForm} from './components/hook/UseState.js';
 
+import {WelcomeMsg, ProductList,CleanUP} 
+from './components/hook/UseEffect.js';
+
+import {
+  Counter
+} from './components/hook/UseReducer.js';
 
 
 const App = () => {
@@ -94,6 +100,16 @@ const App = () => {
 
       <Increment/>
       <LoginForm/>
+
+      {/* useEffect */}
+
+      <WelcomeMsg/>
+      <ProductList/>
+      <CleanUP/>
+
+      <Counter/>
+
+
     </div>
   );
 }
