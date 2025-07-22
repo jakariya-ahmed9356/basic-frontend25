@@ -7,10 +7,9 @@ export default function ProductCard({
 
 
     return (
-        <div>
-            <div className="shadow p-4 w-full ">
+        <div className="shadow p-4">
             <img src={img} alt={title}
-            className='w-full h-48 object-cover'
+            className='w-full h-48'
             />
             <h3 className='text-gray-600 font-bold mt-2'>{title}</h3>
             <p> <strong>Price: {price}</strong> <strong> Discount: {disPrice}</strong>  </p>
@@ -20,7 +19,6 @@ export default function ProductCard({
                 Add to Cart
 
             </button>
-        </div>
         </div>
     )
 }

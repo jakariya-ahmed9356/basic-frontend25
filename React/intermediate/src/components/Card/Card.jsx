@@ -5,7 +5,7 @@ export default function Card(
     {img,title,desc,children,actions,className}
 ) {
     return (
-        <div className={`bg-white shadow-md rounded-2xl overflow-hidden ${className}`}>
+        <div className={`bg-white shadow-md rounded-2xl ${className}`}>
             {img && (
                 <img src={img} alt={title} 
                     className="w-full -h-48 object-cover"
