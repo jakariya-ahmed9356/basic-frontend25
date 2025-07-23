@@ -14,7 +14,7 @@ export default function ProductCard({
             <h3 className='text-gray-600 font-bold mt-2'>{title}</h3>
             <p> <strong>Price: {price}</strong> <strong> Discount: {disPrice}</strong>  </p>
             <button onClick={onAddToCard}
-                className='mt-4 w-full bg-blue-500 text-center py-2 rounded hover:bg-blue-600'
+                className='mt-4 bg-orange-400 hover:bg-orange-500 text-center text-white font-semibold py-2 px-6 rounded-full rounded'
             >
                 Add to Cart
 
