@@ -6,10 +6,11 @@ import Home from './Pages/Home.jsx';
 import Product from './Pages/Product.jsx';
 import About from './Pages/About.jsx';
 import Contact from './Pages/Contact.jsx';
-import ServiceLayout from './Pages/Services/ServiceLayout.jsx';
+import ServiceLayout from './layout/ServiceLayout.jsx';
 import WebDesign from './Pages/Services/WebDesign.jsx';
 import WebDevelopment from './Pages/Services/WebDevelopment.jsx';
 import NotFound from './Pages/NotFound.jsx';
+import JobLayout from './layout/JobLayout.jsx';
 
 export default function App() {
 
@@ -27,6 +28,8 @@ export default function App() {
           <Route path='web-development' element={<WebDevelopment />} />
         </Route>
         
+        {/* Nest Jobs routes under 'jobs' */}
+        <Route path='jobs' element={<JobLayout />} />
 
         <Route path="*" element={<NotFound />} />
       </Route>

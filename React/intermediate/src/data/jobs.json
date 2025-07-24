@@ -1,0 +1,342 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer",
+    "company": "Crawford PLC",
+    "location": "Tonybury, Bangladesh",
+    "type": "Full-time",
+    "salary": "$707/mo",
+    "skills": [
+      "React",
+      "JavaScript",
+      "TailwindCSS"
+    ],
+    "description": "Might page deep better whole see suffer. Training worry several policy per to. Reality bank education policy art staff.",
+    "image": "https://api.dicebear.com/7.x/shapes/svg?seed=CloudSprint",
+    "experience": "5+ years",
+    "date": "2024-09-15"
+  },
+  {
+    "id": 2,
+    "title": "Backend Developer",
+    "company": "White, Robinson and Hanson",
+    "location": "Autumnmouth, Bangladesh",
+    "type": "Contract",
+    "salary": "$1382/mo",
+    "skills": [
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
+    "description": "Area friend hit impact president when eight. Race crime though social yourself she support. Blood experience generation or science finish.",
+    "image": "https://api.dicebear.com/7.x/shapes/svg?seed=DataMesh",
+    "experience": "4+ years",
+    "date": "2024-08-17"
+  },
+  {
+    "id": 3,
+    "title": "UI/UX Designer",
+    "company": "Lutz-Porter",
+    "location": "Port Chelsealand, Bangladesh",
+    "type": "Part-time",
+    "salary": "$1074/mo",
+    "skills": [
+      "Figma",
+      "Sketch",
+      "Adobe XD"
+    ],
+    "description": "Network majority drop long couple. Customer popular push gun manager employee raise. Great value executive small. Government true degree market. Raise road against adult like. Back want arrive particular.",
+    "image": "https://api.dicebear.com/7.x/shapes/svg?seed=CodeCraft",
+    "experience": "2+ years",
+    "date": "2024-10-02"
+  },
+  {
+    "id": 4,
+    "title": "WordPress Developer",
+    "company": "Smith, Chambers and Kennedy",
+    "location": "Cruzville, Bangladesh",
+    "type": "Remote",
+    "salary": "$2384/mo",
+    "skills": [
+      "WordPress",
+      "PHP",
+      "Elementor"
+    ],
+    "description": "Thank central mother we dinner together. Key garden challenge. Performance radio popular election list movement push. Beyond house when tax experience outside. Nation window tell.",
+    "image": "https://api.dicebear.com/7.x/shapes/svg?seed=PixelWave",
+    "experience": "1+ years",
+    "date": "2025-04-23"
+  },
+  {
+    "id": 5,
+    "title": "Mobile App Developer",
+    "company": "Carter-Escobar",
+    "location": "Lake Ashley, Bangladesh",
+    "type": "Remote",
+    "salary": "$1260/mo",
+    "skills": [
+      "Flutter",
+      "Dart",
+      "Firebase"
+    ],
+    "description": "Task me life child. State of one she look. Production drug which child think natural. Without hour station long say ok. Set between health open hope produce nature. Threat professional why stay think together.",
+    "image": "https://api.dicebear.com/7.x/shapes/svg?seed=Designify",
+    "experience": "2+ years",
+    "date": "2024-09-11"
+  },
+  {
+    "id": 6,
+    "title": "Graphic Designer",
+    "company": "Norton-Nelson",
+    "location": "North Jacob, Bangladesh",
+    "type": "Freelance",
+    "salary": "$1371/mo",
+    "skills": [
+      "Photoshop",
+      "Illustrator",
+      "Canva"
+    ],
+    "description": "Far once national meeting expert worker sound. Trip woman do south animal. Whom month method reflect arrive threat. May sit sing employee money change.",
+    "image": "https://api.dicebear.com/7.x/shapes/svg?seed=ByteWorks",
+    "experience": "3+ years",
+    "date": "2025-01-02"
+  },
+  {
+    "id": 7,
+    "title": "Full Stack Developer",
+    "company": "Dominguez-Combs",
+    "location": "South Cassandraview, Bangladesh",
+    "type": "Full-time",
+    "salary": "$1751/mo",
+    "skills": [
+      "React",
+      "Node.js",
+      "PostgreSQL"
+    ],
+    "description": "Action affect forward admit along just difference approach. Time bring positive example officer standard. Vote religious claim risk its.",
+    "image": "https://api.dicebear.com/7.x/shapes/svg?seed=SkyNetix",
+    "experience": "4+ years",
+    "date": "2024-11-09"
+  },
+  {
+    "id": 8,
+    "title": "SEO Specialist",
+    "company": "Perez-Barton",
+    "location": "South Tonya, Bangladesh",
+    "type": "Full-time",
+    "salary": "$1233/mo",
+    "skills": [
+      "SEO",
+      "Analytics",
+      "Keyword Research"
+    ],
+    "description": "Plan two short by real. Organization carry public investment television. Newspaper political book try require arm right. Grow major any road now national law according. Partner note fear religious.",
+    "image": "https://api.dicebear.com/7.x/shapes/svg?seed=AppHive",
+    "experience": "1+ years",
+    "date": "2025-04-30"
+  },
+  {
+    "id": 9,
+    "title": "Social Media Manager",
+    "company": "Marshall-Phillips",
+    "location": "Rubioton, Bangladesh",
+    "type": "Contract",
+    "salary": "$1657/mo",
+    "skills": [
+      "Content Strategy",
+      "Meta Ads",
+      "Instagram"
+    ],
+    "description": "Act name without. My voice nearly quickly. Happy hour cost. Bar other statement toward yard white government.",
+    "image": "https://api.dicebear.com/7.x/shapes/svg?seed=NetFusion",
+    "experience": "2+ years",
+    "date": "2025-05-24"
+  },
+  {
+    "id": 10,
+    "title": "Data Analyst",
+    "company": "Prince Inc",
+    "location": "Jamesside, Bangladesh",
+    "type": "Part-time",
+    "salary": "$2232/mo",
+    "skills": [
+      "Excel",
+      "Power BI",
+      "SQL"
+    ],
+    "description": "Husband bank catch nice worker. Event forget interest stage respond court accept. Certain degree finally side second friend stuff.",
+    "image": "https://api.dicebear.com/7.x/shapes/svg?seed=CloudSprint",
+    "experience": "5+ years",
+    "date": "2024-12-29"
+  },
+  {
+    "id": 11,
+    "title": "QA Engineer",
+    "company": "Turner-Austin",
+    "location": "Henryborough, Bangladesh",
+    "type": "Remote",
+    "salary": "$2369/mo",
+    "skills": [
+      "Selenium",
+      "Jest",
+      "Manual Testing"
+    ],
+    "description": "Suggest level money million. Soldier term before job. Market expert last change carry clear high describe. He home hour. Since foreign well page so black.",
+    "image": "https://api.dicebear.com/7.x/shapes/svg?seed=BlueOrbit",
+    "experience": "2+ years",
+    "date": "2025-01-18"
+  },
+  {
+    "id": 12,
+    "title": "Project Manager",
+    "company": "Jones-Gonzalez",
+    "location": "Lake Andrea, Bangladesh",
+    "type": "Part-time",
+    "salary": "$817/mo",
+    "skills": [
+      "Scrum",
+      "Kanban",
+      "Jira"
+    ],
+    "description": "Avoid pull wind live nearly suffer present along. Left blue they beat song wonder result firm. Without know customer hundred weight sense better. Both science food near. Society pressure give present brother nor husband sister. Animal whatever democratic provide our.",
+    "image": "https://api.dicebear.com/7.x/shapes/svg?seed=AlgoMind",
+    "experience": "1+ years",
+    "date": "2024-08-25"
+  },
+  {
+    "id": 13,
+    "title": "Technical Writer",
+    "company": "Rivera, Thomas and Irwin",
+    "location": "Grossborough, Bangladesh",
+    "type": "Part-time",
+    "salary": "$2039/mo",
+    "skills": [
+      "Markdown",
+      "Documentation",
+      "API Writing"
+    ],
+    "description": "Attention no population moment live relationship. We past girl bit fill. Either chance hit water since old.",
+    "image": "https://api.dicebear.com/7.x/shapes/svg?seed=RapidSoft",
+    "experience": "5+ years",
+    "date": "2025-02-09"
+  },
+  {
+    "id": 14,
+    "title": "DevOps Engineer",
+    "company": "Webb, Acevedo and Evans",
+    "location": "Garciatown, Bangladesh",
+    "type": "Part-time",
+    "salary": "$744/mo",
+    "skills": [
+      "AWS",
+      "Docker",
+      "CI/CD"
+    ],
+    "description": "Energy local address. Shake smile role him. Fill evening hand tend. Scientist local account book. Doctor pretty themselves pay.",
+    "image": "https://api.dicebear.com/7.x/shapes/svg?seed=FusionTech",
+    "experience": "2+ years",
+    "date": "2024-08-24"
+  },
+  {
+    "id": 15,
+    "title": "Machine Learning Engineer",
+    "company": "Kramer-Smith",
+    "location": "Taylorberg, Bangladesh",
+    "type": "Contract",
+    "salary": "$924/mo",
+    "skills": [
+      "Python",
+      "TensorFlow",
+      "Scikit-learn"
+    ],
+    "description": "Manage ground wrong morning kitchen machine. Tv coach easy class pull our. Political begin they behind half best tell. Single involve quite major example area.",
+    "image": "https://api.dicebear.com/7.x/shapes/svg?seed=LogiPoint",
+    "experience": "3+ years",
+    "date": "2025-06-21"
+  },
+  {
+    "id": 16,
+    "title": "Cybersecurity Analyst",
+    "company": "Ellison Group",
+    "location": "North Barbara, Bangladesh",
+    "type": "Contract",
+    "salary": "$1166/mo",
+    "skills": [
+      "SIEM",
+      "Pen Testing",
+      "Network Security"
+    ],
+    "description": "Yourself speak able remain test project concern. With class customer relationship be wall beat early. Within everyone employee law. Color kind building ground system. Authority health beautiful responsibility where budget.",
+    "image": "https://api.dicebear.com/7.x/shapes/svg?seed=SmartCore",
+    "experience": "2+ years",
+    "date": "2024-11-10"
+  },
+  {
+    "id": 17,
+    "title": "Customer Support Specialist",
+    "company": "Gutierrez Ltd",
+    "location": "North Thomas, Bangladesh",
+    "type": "Full-time",
+    "salary": "$2169/mo",
+    "skills": [
+      "CRM",
+      "Email",
+      "Communication"
+    ],
+    "description": "Fear so factor ball. City to reason their end detail rich. Once investment account him such reason.",
+    "image": "https://api.dicebear.com/7.x/shapes/svg?seed=InnoLoop",
+    "experience": "4+ years",
+    "date": "2024-12-02"
+  },
+  {
+    "id": 18,
+    "title": "Video Editor",
+    "company": "Wilson-Allen",
+    "location": "Jessicafurt, Bangladesh",
+    "type": "Full-time",
+    "salary": "$1499/mo",
+    "skills": [
+      "CapCut",
+      "Premiere Pro",
+      "Motion Graphics"
+    ],
+    "description": "Trial beautiful program enough. Strategy down a civil race true. Central between easy purpose federal. Doctor material reach like social generation design.",
+    "image": "https://api.dicebear.com/7.x/shapes/svg?seed=NovaStack",
+    "experience": "2+ years",
+    "date": "2025-04-20"
+  },
+  {
+    "id": 19,
+    "title": "Content Writer",
+    "company": "Barnes LLC",
+    "location": "Port Marie, Bangladesh",
+    "type": "Full-time",
+    "salary": "$1123/mo",
+    "skills": [
+      "Blogging",
+      "SEO Writing",
+      "Grammarly"
+    ],
+    "description": "Movie identify statement. Actually fast political if apply family already. Do determine suddenly reflect. Soon produce throw office ability major at. Help down capital make old senior field.",
+    "image": "https://api.dicebear.com/7.x/shapes/svg?seed=QuantumBit",
+    "experience": "2+ years",
+    "date": "2025-04-10"
+  },
+  {
+    "id": 20,
+    "title": "E-commerce Manager",
+    "company": "Johnson, Marshall and Horn",
+    "location": "Brownchester, Bangladesh",
+    "type": "Freelance",
+    "salary": "$1163/mo",
+    "skills": [
+      "Shopify",
+      "Marketing",
+      "Inventory"
+    ],
+    "description": "Maintain develop shake book about say shake. Yeah middle idea front way water edge. Father person job condition radio threat investment. Rock fall although.",
+    "image": "https://api.dicebear.com/7.x/shapes/svg?seed=TechNova",
+    "experience": "4+ years",
+    "date": "2025-01-26"
+  }
+]

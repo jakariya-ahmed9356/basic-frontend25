@@ -31,6 +31,7 @@ return (
                     <NavLink to="/product" className= {navLinkStyle} >Product</NavLink>
                     <NavLink to="/about" className= {navLinkStyle} >About</NavLink>
                     <NavLink to="/contact" className= {navLinkStyle} >Contact</NavLink>
+                    <NavLink to="/Jobs" className={navLinkStyle}>Jobs</NavLink>
 
                     {/* Dropdown menu  */}
 
@@ -41,7 +42,7 @@ return (
                                 setServiceOpen(!serviceOpen);
                             }}
                              className={`focus:outline-none text-lg ${
-                                isServicesActive ? 'text-red-500 font-semibold' : 'text-gray-700 hover:text-red-500'
+                                isServicesActive ? 'text-red-500 font-semibold underline' : 'text-gray-700 hover:text-red-500'
                             }`}
                         >
                         Services 
