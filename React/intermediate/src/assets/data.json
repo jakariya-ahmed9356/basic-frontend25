@@ -1,4 +1,6 @@
-[
+{
+    "jobs" : [
+    
   {
     "id": 1,
     "title": "Frontend Developer",
@@ -340,3 +342,5 @@
     "date": "2025-01-26"
   }
 ]
+}
+

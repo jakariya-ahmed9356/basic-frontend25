@@ -1,6 +1,17 @@
 import PropTypes from "prop-types";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function JobCard({ job }) {
+
+    // details button click navigate 
+    // Approach 01:
+    const navigate = useNavigate();
+    // Approach 02:
+    const handleJobDeatil = () => {
+        navigate(`/jobs/${job.id}`);
+    }
+
+
     return (
          
     <div className="sm:w-full md:max-w-100 flex items-center md:flex-row p-3 bg-white mt-4">
@@ -19,14 +30,16 @@ export default function JobCard({ job }) {
             <p className="text-gray-600">Salary: {job.salary}</p>
         {/* Skills  */}
         <div className="flex gap-2">
+            <NavLink to={`/jobs/${job.id}`}>
+                <button 
+                    // onClick={() => navigate(`/jobs/${job.id}`) }
+                    className="bg-orange-400 px-4 hover:bg-orange-500 transition py-1 rounded-full mt-4 text-white cursor-pointer"
+                    >
+                    View 👁️
+                </button> 
+            </NavLink>
             <button 
-                onClick={() => onDetailsClick(job) }
-                className="bg-orange-400 px-4 hover:bg-orange-500 transition py-1 rounded-full mt-4 text-white cursor-pointer"
-                >
-                View 👁️
-            </button> 
-            <button 
-                onClick={() => onDetailsClick(job) }
+                onClick={ handleJobDeatil }
                 className="bg-orange-500 px-4 hover:bg-orange-400 transition py-1 rounded-full mt-4 text-white cursor-pointer"
                 >
                 Apply →

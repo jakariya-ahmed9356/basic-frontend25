@@ -11,6 +11,8 @@ import WebDesign from './Pages/Services/WebDesign.jsx';
 import WebDevelopment from './Pages/Services/WebDevelopment.jsx';
 import NotFound from './Pages/NotFound.jsx';
 import JobLayout from './layout/JobLayout.jsx';
+import JobDetails from './components/job/JobDetails.jsx';
+import Jobs from './Pages/Jobs/Jobs.jsx';
 
 export default function App() {
 
@@ -21,6 +23,7 @@ export default function App() {
         <Route path='product' element={<Product />} />
         <Route path='about'  element={<About />} />
         <Route path='contact' element={<Contact />} />
+        
         {/* ✅ Nest service-related routes under 'services' */}
         <Route path='services' element={<ServiceLayout />}>
           <Route index element={<p>Please select a service.</p>} />
@@ -29,8 +32,11 @@ export default function App() {
         </Route>
         
         {/* Nest Jobs routes under 'jobs' */}
-        <Route path='jobs' element={<JobLayout />} />
-
+        <Route path='jobs' >
+          <Route index element={<Jobs />} />
+          <Route path=':id' element={<JobDetails />}/>
+        </Route>
+        
         <Route path="*" element={<NotFound />} />
       </Route>
 

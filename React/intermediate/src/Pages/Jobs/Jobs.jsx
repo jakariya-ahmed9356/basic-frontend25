@@ -6,10 +6,28 @@ import jobsData from '../../data/jobs.json';
 export default function Jobs() {
 
     const [jobs, setJobs] = useState([]);
+    const [loading, setLoading] = useState(false);
+
+    // useEffect(() => {
+    //     setJobs(jobsData);
+    // }, [])
+
+    const  JobsLoader = async () => {
+        try {
+            const res = await fetch('http://localhost:5000/jobs');
+            const data = await res.json();
+            setJobs(data);
+        } catch (err) {
+            console.error('Data not Fecth', err);
+        } finally {
+            setLoading(false);
+        }
+    }
 
     useEffect(() => {
-        setJobs(jobsData);
-    }, [])
+        JobsLoader();
+    });
+
 
     return (
         <div className="px-4 py-6 bg-gray-100">
@@ -28,5 +46,6 @@ export default function Jobs() {
         </div>
     );
 }
+
 
 
