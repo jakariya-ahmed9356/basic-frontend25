@@ -16,10 +16,8 @@
 
 // Solution 01:
 function reverseString(str) {
-// Setp 1: Covert string to  array, Step 2: Reverse the array
-// Step 3: Join back to string
+    // Step 01: String convert into character array by split() 
     return str.split('').reverse().join('');
-
 }
 // console.log(reverseString('Jakriya'));
 
@@ -32,23 +30,23 @@ function reverseString(str) {
  *  
  */
 
+/**  How work recursion functions
+ *  A recursion function is a function that calls itself to solve a
+ *  smaller part of a bigger problem - until it reaches the end point.
+
+*/
+
+
 function reverseStringByRecursion(str) {
-    // Base case: if string is empty, return it.
-    if (str === '') return '';
+   if (str === '') return '';
+    const sliced = str.slice(1);
+   return reverseStringByRecursion(sliced)+ str[0];
 
-    // Recursive step: call the function onthe rest of the string
-    return reverseStringByRecursion(str.slice(1)) + str[0] ;
 }
-
-// Clear str[0] === arr[0] => result is : b
-const str = 'abc';
-const arr = ['a','b','c'];
-
-// console.log(str[1]);
-// console.log(arr[1]);
-
-
 // console.log(reverseStringByRecursion('Jakariya'));
+
+
+
 
 
 
@@ -132,5 +130,5 @@ function palindromeByLoop(str) {
 
 }
 
-console.log(palindromeByLoop("racecar"));
-console.log(palindromeByLoop("hello"));
+// console.log(palindromeByLoop("racecar"));
+// console.log(palindromeByLoop("hello"));
