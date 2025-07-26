@@ -23,7 +23,7 @@ export default function JobDetails() {
 
 const fetchJobDetail = async () => {
     try {
-        const res = await fetch(`http://localhost:5000/jobs/${id}`);
+        const res = await fetch(`https://remoteok.com/api/${id}`);
         const data = await res.json();
         setJob(data);
     } catch (err) {

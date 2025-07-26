@@ -13,6 +13,7 @@ import NotFound from './Pages/NotFound.jsx';
 import JobLayout from './layout/JobLayout.jsx';
 import JobDetails from './components/job/JobDetails.jsx';
 import Jobs from './Pages/Jobs/Jobs.jsx';
+import PractiseForm from './Pages/Form/PractiseForm.jsx';
 
 export default function App() {
 
@@ -36,7 +37,11 @@ export default function App() {
           <Route index element={<Jobs />} />
           <Route path=':id' element={<JobDetails />}/>
         </Route>
-        
+
+        <Route path='form'> 
+          <Route index element={<PractiseForm />} />
+        </Route>
+
         <Route path="*" element={<NotFound />} />
       </Route>
 

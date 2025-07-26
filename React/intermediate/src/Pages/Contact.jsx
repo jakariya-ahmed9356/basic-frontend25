@@ -1,5 +1,10 @@
+import FormComponent from "../components/Form/FormComponent";
 
 
 export default function Contact() {
-    return <h1>Contact Page</h1>
+    return (
+        <div>
+            <FormComponent />
+        </div>
+    )
 }

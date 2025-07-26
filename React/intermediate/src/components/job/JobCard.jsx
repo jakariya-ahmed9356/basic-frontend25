@@ -8,29 +8,34 @@ export default function JobCard({ job }) {
     const navigate = useNavigate();
     // Approach 02:
     const handleJobDeatil = () => {
-        navigate(`/jobs/${job.id}`);
+        navigate(`/jobs/${job.url}`);
     }
 
 
     return (
          
-    <div className="sm:w-full md:max-w-100 flex items-center md:flex-row p-3 bg-white mt-4">
+    <div className="sm:w-full md:max-w-100 flex items-center md:flex-row p-3 bg-white">
         {/* Left Side: Image  */}
         <div className="sm:w-1/4">
-            <img src={job.image}
+            <img src={job.company_logo	}
             className="w-full md:full rounded-full shadow-sm object-cover"
-            alt={job.title} 
+            alt={job.position} 
         />
         </div>
         {/* Right Side: info */}
         <div className="sm:w-3/4 p-4  space-y-2 text-left">
-            <h2 className="text-xl font-bold text-gray-800">{job.title}</h2>
+            <h2 className="text-xl font-bold text-gray-800">{job.position}</h2>
             <p className="text-gray-600">{job.location}</p>
-            <p className="text-gray-600">{job.type} | {job.experience}</p>
-            <p className="text-gray-600">Salary: {job.salary}</p>
+            <p className="text-gray-600">{job.epoch} | {job.experience}</p>
+            <p className="text-gray-600">Salary: Min-{job.salary_min} to Max - {job.salary_max}</p>
         {/* Skills  */}
         <div className="flex gap-2">
-            <NavLink to={`/jobs/${job.id}`}>
+            <NavLink to={`${job.apply_url}`}
+                onClick={(e) => {
+                    e.preventDefault();
+                    window.open(job.apply_url, '_blank')
+                }}
+            >
                 <button 
                     // onClick={() => navigate(`/jobs/${job.id}`) }
                     className="bg-orange-400 px-4 hover:bg-orange-500 transition py-1 rounded-full mt-4 text-white cursor-pointer"
@@ -38,12 +43,19 @@ export default function JobCard({ job }) {
                     View 👁️
                 </button> 
             </NavLink>
+            <NavLink to={`${job.apply_url}`}
+                onClick={(e) => {
+                    e.preventDefault();
+                    window.open(job.apply_url, '_blank')
+                }}
+            >
             <button 
-                onClick={ handleJobDeatil }
+                // onClick={ handleJobDeatil }
                 className="bg-orange-500 px-4 hover:bg-orange-400 transition py-1 rounded-full mt-4 text-white cursor-pointer"
                 >
                 Apply →
             </button> 
+            </NavLink>
         </div>
         </div>
         

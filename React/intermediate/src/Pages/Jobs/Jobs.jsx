@@ -14,7 +14,7 @@ export default function Jobs() {
 
     const  JobsLoader = async () => {
         try {
-            const res = await fetch('http://localhost:5000/jobs');
+            const res = await fetch('https://remoteok.com/api');
             const data = await res.json();
             setJobs(data);
         } catch (err) {
@@ -36,7 +36,7 @@ export default function Jobs() {
                     <h2 className="text-3xl font-semibold mb-2"> Open Jobs </h2>
                     <p className="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, esse?</p>
                 </div>
-                <div className="grid sm:grid-cols-1 items-center md:grid-cols-2 lg:grid-cols-3 gap-2 space-x-4 space-y-4">
+                <div className="grid sm:grid-cols-1 items-center md:grid-cols-2 lg:grid-cols-3 space-y-4">
 
                 {
                     jobs.map(job => <JobCard key={job.id} job={job}/> )
