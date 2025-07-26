@@ -132,3 +132,37 @@ function palindromeByLoop(str) {
 
 // console.log(palindromeByLoop("racecar"));
 // console.log(palindromeByLoop("hello"));
+
+
+// Find max number in array by Math.max()
+const numbers = [10, 4, 90, 7, 10, 20,39];
+
+function findMaxOne(arr) {
+    return Math.max(...arr); // Spread the array into 4,6,7,10,90,20,39
+}
+
+// console.log(findMaxOne(numbers));
+ 
+// Find max number in array by for loop
+
+function findMaxWayTwo(nums) {
+    let max = nums[0]; // Start with first index 0 = 10;
+    for (let i = 1; i < nums.length; i++) {
+        if (nums[i] > max) {
+            max = nums[i];
+        }
+    }
+    return max;
+}
+// console.log(findMaxWayTwo(numbers));
+
+
+// Find Max number by reduce();
+function reachMaxNum(nums) {
+    return nums.reduce((max, curr) => curr > max ? curr: max );
+}
+
+// console.log(reachMaxNum(numbers));
+
+
+
