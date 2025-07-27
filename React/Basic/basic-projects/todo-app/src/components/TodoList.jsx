@@ -1,23 +1,62 @@
+import { use, useState } from "react";
+export default function TodoList({ todos, setTodos, onDel, onToggle , onEdit}) {
 
-export default function TodoList() {
+  const [editingId, setEditingId] = useState(null)
+  const [editInput, setEditInput] = useState('');
 
-  const todos = [1, 2, 3, 4, 5 ];
+  const saveEditedTodo = () => {
+    if (editInput.trim() === '') return; // prevent empty update
+    setTodos(todos.map(todo =>
+      todo.id === editingId
+        ? { ...todo, input: editInput }
+        : todo
+    ));
+    setEditingId(null);
+    setEditInput('');
+  };
 
   return (
     <ul>
-      {todos.map((todo, i) =>
+      {todos.map((todo) =>
         <li
-          key={i}
+          key={todo.id}
           className="flex items-center justify-between border border-gray-300 my-2 px-4 py-2 rounded-md bg-white shadow-sm"
         >
           {/* Left side: checkbox and text */}
           <div className="flex items-center gap-2 mb-2 sm:mb-0">
-            <input type="checkbox" className="w-5 h-5 text-blue-500" />
-            <h4 className="text-gray-500 text-sm sm:text-base">Todo item name</h4>
-          </div>
+            <input type="checkbox" 
+              className="w-5 h-5 text-blue-500" 
+              checked={todo.completed}
+              onChange={() => onToggle(todo.id)}
+            />
+            {editingId === todo.id ? (
+              <input value={editInput}
+              onChange={(e) => setEditInput(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') saveEditedTodo();
+              }}
+              onBlur={saveEditedTodo}
+              autoFocus
+                className="border px-2 py-2 rounded"
+              />
+            ) : (
+              <span
+                onDoubleClick={() => {
+                  setEditingId(todo.id);
+                  setEditInput(todo.input)
+                }}
+                className={`cursor-pointer ${todo.completed ? 'line-through text-gray500' : ''}`}
+              >
+                {todo.input}
+              </span>
+            )}
+        </div>
 
           {/* Right side: delete button */}
-          <button className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition">
+          <button 
+            className="text-sm rounded-full p-1 hover:bg-red-600 transition"
+             onClick={() => onDel(todo.id)}
+          >
             ❌
           </button>
         </li>
