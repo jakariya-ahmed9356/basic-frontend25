@@ -19,8 +19,33 @@
   --color-mint-500: oklch(0.73 0.11 178);
   --color-red-500: oklch(0.94 0.30 400);
   --color-custom-400: oklch(0.34 0.93 334);
+  --color-primary: oklch(0.6349 0.1579 24.22);
   --font-doto: "Doto", sans-serif;
   /* --font-primary: "Fira Code", monospace; */
+
+
+  /* custom responsive  */
+  --breakpoint-sm: 50rem;
+  --breakpoint-md: 100rem
+
+  /* animatin  */
+  --animate-fade-in-scale: fade-in-scale-0.3s ease-out;
+
+  @keyframes fade-in-scale {
+    0%{
+      opacity: 0;
+      transform: rotate(20);
+    }
+    50% {
+      opacity: 0.6;
+      transform: rotate(50);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate(100deg);
+    }
+  }
+
 }
 
 
@@ -36,7 +61,7 @@ h1 {
 
 @layer base {
   body {
-    @apply bg-green-500 text-white font-sans
+    @apply text-white font-sans
   }
 
  h1{
@@ -59,7 +84,7 @@ h1 {
   }
 
   .card {
-    @apply bg-green-300 shadow-lg rounded;
+    @apply bg-primary shadow-lg rounded;
   }
 
 
