@@ -1,0 +1,68 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap'); */
+
+@import "tailwindcss";
+
+#root {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'Doto';
+  src: url('/src/assets/fonts/Doto-Regular.ttf');
+}
+
+
+@theme {
+  --color-mint-500: oklch(0.73 0.11 178);
+  --color-red-500: oklch(0.94 0.30 400);
+  --color-custom-400: oklch(0.34 0.93 334);
+  --font-doto: "Doto", sans-serif;
+  /* --font-primary: "Fira Code", monospace; */
+}
+
+
+body {
+  font-family: var(--font-primary)
+}
+
+h1 {
+
+}
+
+/* layer base  */
+
+@layer base {
+  body {
+    @apply bg-green-500 text-white font-sans
+  }
+
+ h1{
+    @apply text-5xl text-gray-500 text-purple-600 font-bold
+  }
+
+  h2 {
+    @apply font-bold font-doto
+  }
+
+
+
+}
+
+
+/* layer component  */
+@layer components {
+  .btn {
+    @apply bg-white text-[#a2a222] px-6 py-2 rounded-full font-semibold shadow-lg
+  }
+
+  .card {
+    @apply bg-green-300 shadow-lg rounded;
+  }
+
+
+
+
+}
