@@ -1,3 +1,4 @@
+import FlexBox from "../components/FlexBoxCom";
 import Theme from "../components/ThemeCom";
 
 export default function Home() {
@@ -5,6 +6,11 @@ export default function Home() {
         <div>
             {/* Theme Color  */}
             <Theme />
+
+            {/* Flex Box Basic  */}
+
+            <FlexBox />
+
         </div>
     );
 }

@@ -26,7 +26,7 @@
 
   /* custom responsive  */
   --breakpoint-sm: 50rem;
-  --breakpoint-md: 100rem
+  --breakpoint-md: 100rem;
 
   --tracking-3: 0.05em;
   --tracking-tightest: -0.075em; 
@@ -54,26 +54,24 @@
 
 
 body {
-  font-family: var(--font-primary)
+  font-family: var(--font-primary);
 }
 
-h1 {
 
-}
 
 /* layer base  */
 
 @layer base {
   body {
-    @apply text-white font-sans
+    @apply text-white font-sans;
   }
 
  h1{
-    @apply text-5xl text-gray-500 text-purple-600 font-bold
+    @apply text-5xl text-gray-500 text-purple-600 font-bold;
   }
 
   h2 {
-    @apply font-bold font-doto
+    @apply font-bold font-doto;
   }
 
 
@@ -91,7 +89,8 @@ h1 {
     @apply bg-primary shadow-lg rounded;
   }
 
-
-
+  .container {
+    @apply bg-gray-100 px-4 py-6 w-full mx-auto;
+  }
 
 }

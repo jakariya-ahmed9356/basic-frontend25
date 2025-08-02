@@ -32,7 +32,7 @@ export default function Theme() {
 
                 <p className="stacked-fractions">1/2 3/4 5/6</p>
 
-                <p class="line-clamp-1">
+                <p className="line-clamp-1">
                 Nulla dolor velit adipisicing duis excepteur esse in duis nostrud occaecat mollit incididunt deserunt sunt. Ut ut
                 sunt laborum ex occaecat eu tempor labore enim adipisicing minim ad. Est in quis eu dolore occaecat excepteur fugiat
                 dolore nisi aliqua fugiat enim ut cillum. Labore enim duis nostrud eu. Est ut eiusmod consequat irure quis deserunt
