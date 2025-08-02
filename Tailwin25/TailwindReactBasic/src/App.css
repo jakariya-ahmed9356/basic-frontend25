@@ -28,6 +28,10 @@
   --breakpoint-sm: 50rem;
   --breakpoint-md: 100rem
 
+  --tracking-3: 0.05em;
+  --tracking-tightest: -0.075em; 
+
+
   /* animatin  */
   --animate-fade-in-scale: fade-in-scale-0.3s ease-out;
 
